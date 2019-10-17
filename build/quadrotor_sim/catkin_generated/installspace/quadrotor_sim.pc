@@ -1,0 +1,8 @@
+prefix=/home/cody/catkin_ws/install
+
+Name: quadrotor_sim
+Description: Description of quadrotor_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cody/catkin_ws/install/lib 
+Requires: 
