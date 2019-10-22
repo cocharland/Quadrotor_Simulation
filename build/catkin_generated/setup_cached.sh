@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/cody/catkin_ws/build"
+export ROS_PACKAGE_PATH="/home/cody/catkin_ws/src:/home/cody/catkin_ws/src/quadrotor_sim:/opt/ros/kinetic/share"

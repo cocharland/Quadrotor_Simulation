@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  message_generation
+  geometry_msgs
+  nav_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -54,11 +57,12 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   AddTwoInts.srv
+   move_quad.srv
+   mc_plan.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -68,10 +72,12 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+generate_messages(
+   DEPENDENCIES
+   std_msgs
+   geometry_msgs
+   nav_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -105,7 +111,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES quadrotor_sim
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime geometry_msgs nav_msgs
 #  DEPENDS system_lib
 )
 
@@ -204,3 +210,22 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+add_dependencies(add_two_ints_server quadrotor_sim_gencpp)
+
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+add_dependencies(add_two_ints_client quadrotor_sim_gencpp)
+
+add_executable(move_quad_server src/move_quad_server.cpp)
+target_link_libraries(move_quad_server ${catkin_LIBRARIES})
+add_dependencies(move_quad_server quadrotor_sim_gencpp)
+
+add_executable(move_quad_test_client src/move_quad_test_client.cpp)
+target_link_libraries(move_quad_test_client ${catkin_LIBRARIES})
+add_dependencies(move_quad_test_client quadrotor_sim_gencpp)
+
+add_executable(make_plan src/make_plan.cpp)
+target_link_libraries(make_plan ${catkin_LIBRARIES})
+add_dependencies(make_plan quadrotor_sim_gencpp)

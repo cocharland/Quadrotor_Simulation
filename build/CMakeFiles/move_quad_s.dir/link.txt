@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/move_quad_s.dir/src/move_quad_server.cpp.o  -o /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_s 

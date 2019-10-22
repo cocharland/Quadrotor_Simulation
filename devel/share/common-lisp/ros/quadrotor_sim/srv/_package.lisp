@@ -1,0 +1,20 @@
+(cl:defpackage quadrotor_sim-srv
+  (:use )
+  (:export
+   "ADDTWOINTS"
+   "<ADDTWOINTS-REQUEST>"
+   "ADDTWOINTS-REQUEST"
+   "<ADDTWOINTS-RESPONSE>"
+   "ADDTWOINTS-RESPONSE"
+   "MC_PLAN"
+   "<MC_PLAN-REQUEST>"
+   "MC_PLAN-REQUEST"
+   "<MC_PLAN-RESPONSE>"
+   "MC_PLAN-RESPONSE"
+   "MOVE_QUAD"
+   "<MOVE_QUAD-REQUEST>"
+   "MOVE_QUAD-REQUEST"
+   "<MOVE_QUAD-RESPONSE>"
+   "MOVE_QUAD-RESPONSE"
+  ))
+

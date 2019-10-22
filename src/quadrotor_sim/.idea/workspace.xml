@@ -1,80 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="quadrotor_sim" targetName="download_extra_data" />
+      <config projectName="quadrotor_sim" targetName="run_tests" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="move_quad_server" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="make_plan" />
+      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_move_quad" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="gtest_main" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="gmock" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genpy" />
+      <config projectName="quadrotor_sim" targetName="gtest" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="clean_test_results" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genlisp" />
+      <config projectName="quadrotor_sim" targetName="add_two_ints_server" />
+      <config projectName="quadrotor_sim" targetName="move_quad_test_client" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_gencpp" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="add_two_ints_client" />
+      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_mc_plan" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="tests" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_geneus" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_gennodejs" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="doxygen" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="gmock_main" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_cpp" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCATKIN_DEVEL_PREFIX:PATH=/home/cody/catkin_ws/devel" GENERATION_DIR="$PROJECT_DIR$/../../build" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/catkin_ws.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quadrotor_mapping/.idea/quadrotor_mapping.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/AddTwoInts.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/mc_plan.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/mc_planRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/mc_planResponse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/move_quad.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/move_quadRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/include/quadrotor_sim/move_quadResponse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/add_two_ints_client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/add_two_ints_server" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/move_quad_server" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/move_quad_test_client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/add_two_ints_client.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/add_two_ints_server.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/make_plan.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/move_quad_server.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/move_quad_test_client.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srv/AddTwoInts.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srv/mc_plan.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srv/move_quad.srv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/3.5.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/clean_test_results.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/clean_test_results.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/download_extra_data.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/download_extra_data.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/doxygen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/doxygen.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/run_tests.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/run_tests.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/tests.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/tests.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CTestConfiguration.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CTestConfiguration.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/order_packages.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/order_packages.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/catkin_make.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_make.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/installspace/.rosinstall" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/installspace/.rosinstall" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/installspace/local_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/installspace/local_setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/installspace/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/installspace/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/setup_cached.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/gtest/gtest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/gtest/gtest/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_plugins_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_plugins_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation/CMakeFiles/hector_pose_estimation_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation/CMakeFiles/hector_pose_estimation_node.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation/CMakeFiles/pose_estimation.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation/CMakeFiles/pose_estimation.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation_core/CMakeFiles/hector_pose_estimation.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_localization/hector_pose_estimation_core/CMakeFiles/hector_pose_estimation.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_localization/message_to_tf/CMakeFiles/message_to_tf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_localization/message_to_tf/CMakeFiles/message_to_tf.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_localization/message_to_tf/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_localization/message_to_tf/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_actions/CMakeFiles/landing_action.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_actions/CMakeFiles/landing_action.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_actions/CMakeFiles/pose_action.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_actions/CMakeFiles/pose_action.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_actions/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_actions/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_controller_gazebo/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_controller_gazebo/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_controllers/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_controllers/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_interface/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_interface/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/hector_quadrotor_aerodynamics.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/hector_quadrotor_aerodynamics.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_pose_estimation/CMakeFiles/hector_quadrotor_pose_estimation.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_pose_estimation/CMakeFiles/hector_quadrotor_pose_estimation.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_pose_estimation/CMakeFiles/hector_quadrotor_pose_estimation_nodelet.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_pose_estimation/CMakeFiles/hector_quadrotor_pose_estimation_nodelet.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_pose_estimation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_pose_estimation/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_teleop/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_teleop/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/hector_uav_msgs_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_uav_msgs/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_compressed_map_transport/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_compressed_map_transport/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_tools/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_imu_tools/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_map_server/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_map_server/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_mapping/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_mapping/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/quadrotor_mapping/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/quadrotor_mapping/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/quadrotor_sim/catkin_generated/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/quadrotor_sim/catkin_generated/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/quadrotor_sim/catkin_generated/stamps/quadrotor_sim/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/quadrotor_sim/catkin_generated/stamps/quadrotor_sim/package.xml.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/quadrotor_sim/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/quadrotor_sim/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/.catkin" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/.catkin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/lib/pkgconfig/quadrotor_sim.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/pkgconfig/quadrotor_sim.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/share/quadrotor_sim/cmake/quadrotor_simConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/share/quadrotor_sim/cmake/quadrotor_simConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/quadrotor_sim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/quadrotor_sim.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/package.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +212,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -93,11 +227,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1SIs0jyTEBePa4uetq1H5HgkTrw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../build" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -110,6 +248,358 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.make_plan">
+    <configuration name="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_quadrotor_sim_generate_messages_check_deps_mc_plan" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="_quadrotor_sim_generate_messages_check_deps_mc_plan" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_quadrotor_sim_generate_messages_check_deps_move_quad" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="_quadrotor_sim_generate_messages_check_deps_move_quad" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="actionlib_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="actionlib_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="actionlib_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="actionlib_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="actionlib_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="actionlib_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="actionlib_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="actionlib_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="actionlib_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="actionlib_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="add_two_ints_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="add_two_ints_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="quadrotor_sim" RUN_TARGET_NAME="add_two_ints_client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="add_two_ints_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="add_two_ints_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="quadrotor_sim" RUN_TARGET_NAME="add_two_ints_server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="clean_test_results" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="doxygen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="doxygen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geometry_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="geometry_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geometry_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="geometry_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geometry_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="geometry_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geometry_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="geometry_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geometry_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="geometry_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="make_plan" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="make_plan" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="quadrotor_sim" RUN_TARGET_NAME="make_plan">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="move_quad_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="move_quad_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="quadrotor_sim" RUN_TARGET_NAME="move_quad_server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="move_quad_test_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="move_quad_test_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="quadrotor_sim" RUN_TARGET_NAME="move_quad_test_client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nav_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="nav_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nav_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="nav_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nav_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="nav_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nav_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="nav_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nav_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="nav_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_gencpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_generate_messages" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_geneus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_geneus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_genlisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_gennodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_gennodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quadrotor_sim_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="quadrotor_sim_genpy" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="roscpp_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="roscpp_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="roscpp_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="roscpp_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="roscpp_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="roscpp_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="roscpp_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="roscpp_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="roscpp_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="roscpp_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rosgraph_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="rosgraph_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rosgraph_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="rosgraph_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rosgraph_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="rosgraph_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rosgraph_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="rosgraph_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rosgraph_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="rosgraph_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="run_tests" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="std_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="std_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="std_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="std_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="std_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="std_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="std_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="std_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="std_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="std_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="tests" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application._quadrotor_sim_generate_messages_check_deps_AddTwoInts" />
+      <item itemvalue="CMake Application._quadrotor_sim_generate_messages_check_deps_mc_plan" />
+      <item itemvalue="CMake Application._quadrotor_sim_generate_messages_check_deps_move_quad" />
+      <item itemvalue="CMake Application.actionlib_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.actionlib_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.actionlib_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.actionlib_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.actionlib_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.add_two_ints_client" />
+      <item itemvalue="CMake Application.add_two_ints_server" />
+      <item itemvalue="CMake Application.clean_test_results" />
+      <item itemvalue="CMake Application.download_extra_data" />
+      <item itemvalue="CMake Application.doxygen" />
+      <item itemvalue="CMake Application.geometry_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.geometry_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.geometry_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.geometry_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.geometry_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.make_plan" />
+      <item itemvalue="CMake Application.move_quad_server" />
+      <item itemvalue="CMake Application.move_quad_test_client" />
+      <item itemvalue="CMake Application.nav_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.nav_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.nav_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.nav_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.nav_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.quadrotor_sim_gencpp" />
+      <item itemvalue="CMake Application.quadrotor_sim_generate_messages" />
+      <item itemvalue="CMake Application.quadrotor_sim_generate_messages_cpp" />
+      <item itemvalue="CMake Application.quadrotor_sim_generate_messages_eus" />
+      <item itemvalue="CMake Application.quadrotor_sim_generate_messages_lisp" />
+      <item itemvalue="CMake Application.quadrotor_sim_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.quadrotor_sim_generate_messages_py" />
+      <item itemvalue="CMake Application.quadrotor_sim_geneus" />
+      <item itemvalue="CMake Application.quadrotor_sim_genlisp" />
+      <item itemvalue="CMake Application.quadrotor_sim_gennodejs" />
+      <item itemvalue="CMake Application.quadrotor_sim_genpy" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_cpp" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_eus" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_lisp" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_py" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.run_tests" />
+      <item itemvalue="CMake Application.std_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.std_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.std_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.std_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.std_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.tests" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -124,6 +614,10 @@
       <workItem from="1571262223444" duration="45000" />
       <workItem from="1571262282298" duration="864000" />
       <workItem from="1571371698006" duration="1205000" />
+      <workItem from="1571712955215" duration="1202000" />
+      <workItem from="1571714161703" duration="92000" />
+      <workItem from="1571714297607" duration="62000" />
+      <workItem from="1571714407403" duration="22034000" />
     </task>
     <servers />
   </component>
@@ -135,10 +629,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
