@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: hector_uav_msgs
+Description: Description of hector_uav_msgs
+Version: 0.3.5
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: message_runtime std_msgs

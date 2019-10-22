@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="" />
+    <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/catkin_ws.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quadrotor_mapping/.idea/quadrotor_mapping.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/order_packages.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/order_packages.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_make.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_make.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/diffdrive_plugin_multi_wheel.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/gazebo_ros_force_based_move.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_reset_plugin.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_gazebo_ros_sonar.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_plugins/CMakeFiles/hector_servo_plugin.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_camera.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/gazebo_ros_thermal_depth_camera.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_aerodynamics.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_propulsion.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +89,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1SIs0jyTEBePa4uetq1H5HgkTrw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -44,10 +123,22 @@
       <updated>1571262222193</updated>
       <workItem from="1571262223444" duration="45000" />
       <workItem from="1571262282298" duration="864000" />
+      <workItem from="1571371698006" duration="1205000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

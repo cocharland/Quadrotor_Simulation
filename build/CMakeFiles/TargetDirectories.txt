@@ -280,6 +280,13 @@
 /home/cody/catkin_ws/build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/hector_quadrotor_aerodynamics.dir
 /home/cody/catkin_ws/build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/install/local.dir
 /home/cody/catkin_ws/build/hector_quadrotor/hector_quadrotor_model/CMakeFiles/install/strip.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/list_install_components.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/install.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/rebuild_cache.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/install/strip.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/install/local.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/test.dir
+/home/cody/catkin_ws/build/quadrotor_mapping/CMakeFiles/edit_cache.dir
 /home/cody/catkin_ws/build/quadrotor_sim/CMakeFiles/list_install_components.dir
 /home/cody/catkin_ws/build/quadrotor_sim/CMakeFiles/install.dir
 /home/cody/catkin_ws/build/quadrotor_sim/CMakeFiles/rebuild_cache.dir

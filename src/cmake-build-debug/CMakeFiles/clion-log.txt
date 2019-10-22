@@ -1,0 +1,352 @@
+/home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/cody/catkin_ws/src
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/cody/catkin_ws/src/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /home/cody/catkin_ws/devel;/opt/ros/kinetic
+-- This workspace overlays: /home/cody/catkin_ws/devel;/opt/ros/kinetic
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/cody/catkin_ws/src/cmake-build-debug/test_results
+-- Found gmock sources under '/usr/src/gmock': gmock will be built
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found gtest sources under '/usr/src/gmock': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.18
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 41 packages in topological order:
+-- ~~  - hector_components_description
+-- ~~  - hector_gazebo (metapackage)
+-- ~~  - hector_gazebo_worlds
+-- ~~  - hector_localization (metapackage)
+-- ~~  - hector_models (metapackage)
+-- ~~  - hector_quadrotor
+-- ~~  - hector_quadrotor_demo
+-- ~~  - hector_quadrotor_description
+-- ~~  - hector_sensors_description
+-- ~~  - hector_sensors_gazebo
+-- ~~  - hector_slam (metapackage)
+-- ~~  - hector_slam_launch
+-- ~~  - hector_xacro_tools
+-- ~~  - hector_uav_msgs
+-- ~~  - hector_map_tools
+-- ~~  - hector_nav_msgs
+-- ~~  - hector_geotiff
+-- ~~  - hector_geotiff_plugins
+-- ~~  - hector_marker_drawing
+-- ~~  - hector_quadrotor_model
+-- ~~  - quadrotor_mapping
+-- ~~  - quadrotor_sim
+-- ~~  - hector_compressed_map_transport
+-- ~~  - hector_gazebo_plugins
+-- ~~  - hector_imu_attitude_to_tf
+-- ~~  - hector_imu_tools
+-- ~~  - hector_map_server
+-- ~~  - hector_pose_estimation_core
+-- ~~  - hector_pose_estimation
+-- ~~  - hector_quadrotor_gazebo_plugins
+-- ~~  - hector_quadrotor_pose_estimation
+-- ~~  - hector_trajectory_server
+-- ~~  - message_to_tf
+-- ~~  - hector_mapping
+-- ~~  - hector_gazebo_thermal_camera
+-- ~~  - hector_quadrotor_interface
+-- ~~  - hector_quadrotor_actions
+-- ~~  - hector_quadrotor_controllers
+-- ~~  - hector_quadrotor_teleop
+-- ~~  - hector_quadrotor_controller_gazebo
+-- ~~  - hector_quadrotor_gazebo
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'hector_components_description'
+-- ==> add_subdirectory(hector_models/hector_components_description)
+-- +++ processing catkin metapackage: 'hector_gazebo'
+-- ==> add_subdirectory(hector_gazebo/hector_gazebo)
+-- +++ processing catkin package: 'hector_gazebo_worlds'
+-- ==> add_subdirectory(hector_gazebo/hector_gazebo_worlds)
+-- +++ processing catkin metapackage: 'hector_localization'
+-- ==> add_subdirectory(hector_localization/hector_localization)
+-- +++ processing catkin metapackage: 'hector_models'
+-- ==> add_subdirectory(hector_models/hector_models)
+-- +++ processing catkin package: 'hector_quadrotor'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor)
+-- +++ processing catkin package: 'hector_quadrotor_demo'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_demo)
+-- +++ processing catkin package: 'hector_quadrotor_description'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_description)
+-- +++ processing catkin package: 'hector_sensors_description'
+-- ==> add_subdirectory(hector_models/hector_sensors_description)
+-- +++ processing catkin package: 'hector_sensors_gazebo'
+-- ==> add_subdirectory(hector_gazebo/hector_sensors_gazebo)
+-- +++ processing catkin metapackage: 'hector_slam'
+-- ==> add_subdirectory(hector_slam/hector_slam)
+-- +++ processing catkin package: 'hector_slam_launch'
+-- ==> add_subdirectory(hector_slam/hector_slam_launch)
+-- +++ processing catkin package: 'hector_xacro_tools'
+-- ==> add_subdirectory(hector_models/hector_xacro_tools)
+-- +++ processing catkin package: 'hector_uav_msgs'
+-- ==> add_subdirectory(hector_quadrotor/hector_uav_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Generating .msg files for action hector_uav_msgs/Pose /home/cody/catkin_ws/src/hector_quadrotor/hector_uav_msgs/action/Pose.action
+Generating for action Pose
+-- Generating .msg files for action hector_uav_msgs/Landing /home/cody/catkin_ws/src/hector_quadrotor/hector_uav_msgs/action/Landing.action
+Generating for action Landing
+-- Generating .msg files for action hector_uav_msgs/Takeoff /home/cody/catkin_ws/src/hector_quadrotor/hector_uav_msgs/action/Takeoff.action
+Generating for action Takeoff
+-- hector_uav_msgs: 42 messages, 1 services
+-- +++ processing catkin package: 'hector_map_tools'
+-- ==> add_subdirectory(hector_slam/hector_map_tools)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_nav_msgs'
+-- ==> add_subdirectory(hector_slam/hector_nav_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- hector_nav_msgs: 0 messages, 5 services
+-- +++ processing catkin package: 'hector_geotiff'
+-- ==> add_subdirectory(hector_slam/hector_geotiff)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Looking for Q_WS_X11
+-- Looking for Q_WS_X11 - found
+-- Looking for Q_WS_WIN
+-- Looking for Q_WS_WIN - not found
+-- Looking for Q_WS_QWS
+-- Looking for Q_WS_QWS - not found
+-- Looking for Q_WS_MAC
+-- Looking for Q_WS_MAC - not found
+-- Found Qt4: /usr/bin/qmake (found suitable version "4.8.7", minimum required is "4.6") 
+-- +++ processing catkin package: 'hector_geotiff_plugins'
+-- ==> add_subdirectory(hector_slam/hector_geotiff_plugins)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_marker_drawing'
+-- ==> add_subdirectory(hector_slam/hector_marker_drawing)
+-- +++ processing catkin package: 'hector_quadrotor_model'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_model)
+-- Found Boost: /usr/include (found version "1.58.0") found components:  thread chrono system date_time atomic 
+-- +++ processing catkin package: 'quadrotor_mapping'
+-- ==> add_subdirectory(quadrotor_mapping)
+-- +++ processing catkin package: 'quadrotor_sim'
+-- ==> add_subdirectory(quadrotor_sim)
+-- +++ processing catkin package: 'hector_compressed_map_transport'
+-- ==> add_subdirectory(hector_slam/hector_compressed_map_transport)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found OpenCV: /opt/ros/kinetic (found version "3.3.1") 
+-- +++ processing catkin package: 'hector_gazebo_plugins'
+-- ==> add_subdirectory(hector_gazebo/hector_gazebo_plugins)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found suitable version "1.58.0", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+CMake Warning at /home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/share/cmake-3.15/Modules/FindProtobuf.cmake:499 (message):
+  Protobuf compiler version doesn't match library version 2.6.1
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
+  hector_gazebo/hector_gazebo_plugins/CMakeLists.txt:14 (find_package)
+
+
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "2.6.1") 
+-- Found Boost: /usr/include (found version "1.58.0")  
+-- Looking for OGRE...
+-- OGRE_PREFIX_WATCH changed.
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Found Boost: /usr/include (found version "1.58.0") found components:  thread chrono system date_time atomic 
+-- hector_gazebo_plugins: 0 messages, 1 services
+-- +++ processing catkin package: 'hector_imu_attitude_to_tf'
+-- ==> add_subdirectory(hector_slam/hector_imu_attitude_to_tf)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_imu_tools'
+-- ==> add_subdirectory(hector_slam/hector_imu_tools)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_map_server'
+-- ==> add_subdirectory(hector_slam/hector_map_server)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_pose_estimation_core'
+-- ==> add_subdirectory(hector_localization/hector_pose_estimation_core)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- CMAKE_BUILD_TYPE:               Debug
+-- CMAKE_CXX_FLAGS_RELEASE:        -O3 -DNDEBUG
+-- CMAKE_CXX_FLAGS_RELWITHDEBINFO: -O3 -g -DNDEBUG
+-- CMAKE_CXX_FLAGS_MINSIZEREL:     -Os -DNDEBUG
+-- CMAKE_CXX_FLAGS_DEBUG:          -g
+-- +++ processing catkin package: 'hector_pose_estimation'
+-- ==> add_subdirectory(hector_localization/hector_pose_estimation)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_quadrotor_gazebo_plugins'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_gazebo_plugins)
+-- Found Boost: /usr/include (found suitable version "1.58.0", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+CMake Warning at /home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/share/cmake-3.15/Modules/FindProtobuf.cmake:499 (message):
+  Protobuf compiler version doesn't match library version 2.6.1
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
+  /opt/ros/kinetic/share/gazebo_dev/cmake/gazebo_dev-extras.cmake:2 (find_package)
+  /opt/ros/kinetic/share/gazebo_dev/cmake/gazebo_devConfig.cmake:199 (include)
+  /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package)
+  hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeLists.txt:7 (find_package)
+
+
+-- Found Boost: /usr/include (found version "1.58.0")  
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+CMake Warning (dev) at /home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/share/cmake-3.15/Modules/FindBoost.cmake:1270 (if):
+  Policy CMP0054 is not set: Only interpret if() arguments as variables or
+  keywords when unquoted.  Run "cmake --help-policy CMP0054" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+
+  Quoted variables like "chrono" will no longer be dereferenced when the
+  policy is set to NEW.  Since the policy is not set the OLD behavior will be
+  used.
+Call Stack (most recent call first):
+  /home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/share/cmake-3.15/Modules/FindBoost.cmake:1904 (_Boost_MISSING_DEPENDENCIES)
+  /usr/share/OGRE/cmake/modules/FindOGRE.cmake:318 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
+  /opt/ros/kinetic/share/gazebo_dev/cmake/gazebo_dev-extras.cmake:2 (find_package)
+  /opt/ros/kinetic/share/gazebo_dev/cmake/gazebo_devConfig.cmake:199 (include)
+  /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package)
+  hector_quadrotor/hector_quadrotor_gazebo_plugins/CMakeLists.txt:7 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Gazebo version: 7.0
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_quadrotor_pose_estimation'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_pose_estimation)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_trajectory_server'
+-- ==> add_subdirectory(hector_slam/hector_trajectory_server)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'message_to_tf'
+-- ==> add_subdirectory(hector_localization/message_to_tf)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_mapping'
+-- ==> add_subdirectory(hector_slam/hector_mapping)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found version "1.58.0") found components:  thread signals chrono system date_time atomic 
+-- hector_mapping: 2 messages, 0 services
+-- +++ processing catkin package: 'hector_gazebo_thermal_camera'
+-- ==> add_subdirectory(hector_gazebo/hector_gazebo_thermal_camera)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found suitable version "1.58.0", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+CMake Warning at /home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/share/cmake-3.15/Modules/FindProtobuf.cmake:499 (message):
+  Protobuf compiler version doesn't match library version 2.6.1
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
+  hector_gazebo/hector_gazebo_thermal_camera/CMakeLists.txt:14 (find_package)
+
+
+-- Found Boost: /usr/include (found version "1.58.0")  
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Checking for module 'OGRE-Paging'
+--   Found OGRE-Paging, version 1.9.0
+-- Found Boost: /usr/include (found version "1.58.0") found components:  thread chrono system date_time atomic 
+-- +++ processing catkin package: 'hector_quadrotor_interface'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_interface)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found version "1.58.0") found components:  system 
+-- +++ processing catkin package: 'hector_quadrotor_actions'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_actions)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_quadrotor_controllers'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_controllers)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_quadrotor_teleop'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_teleop)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_quadrotor_controller_gazebo'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_controller_gazebo)
+-- Found Boost: /usr/include (found suitable version "1.58.0", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+CMake Warning at /home/cody/Downloads/clion-2019.2.4/bin/cmake/linux/share/cmake-3.15/Modules/FindProtobuf.cmake:499 (message):
+  Protobuf compiler version doesn't match library version 2.6.1
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
+  /opt/ros/kinetic/share/gazebo_dev/cmake/gazebo_dev-extras.cmake:2 (find_package)
+  /opt/ros/kinetic/share/gazebo_dev/cmake/gazebo_devConfig.cmake:199 (include)
+  /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package)
+  hector_quadrotor/hector_quadrotor_controller_gazebo/CMakeLists.txt:4 (find_package)
+
+
+-- Found Boost: /usr/include (found version "1.58.0")  
+-- Gazebo version: 7.0
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'hector_quadrotor_gazebo'
+-- ==> add_subdirectory(hector_quadrotor/hector_quadrotor_gazebo)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cody/catkin_ws/src/cmake-build-debug

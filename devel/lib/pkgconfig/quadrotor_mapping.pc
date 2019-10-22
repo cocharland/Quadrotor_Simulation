@@ -1,0 +1,8 @@
+prefix=/home/cody/catkin_ws/devel
+
+Name: quadrotor_mapping
+Description: Description of quadrotor_mapping
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cody/catkin_ws/devel/lib 
+Requires: 

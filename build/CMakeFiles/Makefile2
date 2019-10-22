@@ -4884,6 +4884,24 @@ clean: hector_quadrotor/hector_quadrotor_model/CMakeFiles/hector_quadrotor_aerod
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory quadrotor_mapping
+
+# Convenience name for "all" pass in the directory.
+quadrotor_mapping/all:
+
+.PHONY : quadrotor_mapping/all
+
+# Convenience name for "clean" pass in the directory.
+quadrotor_mapping/clean:
+
+.PHONY : quadrotor_mapping/clean
+
+# Convenience name for "preinstall" pass in the directory.
+quadrotor_mapping/preinstall:
+
+.PHONY : quadrotor_mapping/preinstall
+
+#=============================================================================
 # Directory level rules for directory quadrotor_sim
 
 # Convenience name for "all" pass in the directory.

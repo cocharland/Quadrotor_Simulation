@@ -120,15 +120,6 @@ gazebo_ros_thermal_camera_EXTERNAL_OBJECTS =
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /opt/ros/kinetic/lib/libvision_reconfigure.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /opt/ros/kinetic/lib/libgazebo_ros_utils.so
@@ -222,9 +213,6 @@ gazebo_ros_thermal_camera_EXTERNAL_OBJECTS =
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /opt/ros/kinetic/lib/libvision_reconfigure.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /opt/ros/kinetic/lib/libgazebo_ros_utils.so
 /home/cody/catkin_ws/devel/lib/libgazebo_ros_thermal_camera.so: /opt/ros/kinetic/lib/libgazebo_ros_camera_utils.so
