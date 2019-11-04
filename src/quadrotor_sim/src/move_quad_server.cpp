@@ -27,6 +27,7 @@ void storePose(const nav_msgs::Odometry::ConstPtr&  msg){
     message_out.linear.z = 0.1*(currentCommandedPose.position.z-currentZ);
     message_out.linear.x = 0.1*(currentCommandedPose.position.x-currentX);
     message_out.linear.y = 0.1*(currentCommandedPose.position.y-currentY);
+    message_out.angular.z = 0.1;
 
     (*nPubPtr).publish(message_out);
 
@@ -56,7 +57,7 @@ int main(int argc, char **argv)
     tmp.position.x = 0;
     currentCommandedPose = tmp;
     ros::ServiceServer service = n.advertiseService("move_quad", add);
-    ROS_INFO("Ready to move this bitch!");
+    ROS_INFO("Ready to move");
 
     ros::Subscriber poseSub = n.subscribe("/ground_truth/state",1,storePose);
     ros::Publisher twistPub = n.advertise<geometry_msgs::Twist>("/cmd_vel",1);

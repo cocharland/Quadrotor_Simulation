@@ -7,4 +7,3 @@
 # new environment variables
 
 # modified environment variables
-export ROS_PACKAGE_PATH="/home/cody/catkin_ws/src:/home/cody/catkin_ws/src/quadrotor_sim:/opt/ros/kinetic/share"
