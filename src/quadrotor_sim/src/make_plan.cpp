@@ -25,8 +25,10 @@ struct State {
 };
 struct adjNode{
     int nodeNum; //node Number
+    bool observationNode;
     State robotState; //state of the system at this node.
     int action;
+    vector<int> observation;
 };
 struct edge{
     adjNode* node;

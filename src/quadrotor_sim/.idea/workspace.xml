@@ -69,12 +69,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/move_quad_server.dir/src/move_quad_server.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/move_quad_server.dir/src/move_quad_server.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/move_quad_server" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/move_quad_server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/make_plan.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/make_plan.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/move_quad_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/move_quad_server.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -489,7 +484,7 @@
       <workItem from="1571714297607" duration="62000" />
       <workItem from="1571714407403" duration="22923000" />
       <workItem from="1572554434486" duration="633000" />
-      <workItem from="1572814562163" duration="11783000" />
+      <workItem from="1572814562163" duration="13838000" />
     </task>
     <servers />
   </component>
