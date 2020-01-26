@@ -2,64 +2,64 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="move_quad_test_client" />
-      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_cpp" />
-      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_gennodejs" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_cpp" />
-      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_mc_plan" />
-      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_geneus" />
-      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages" />
-      <config projectName="quadrotor_sim" targetName="gmock" />
       <config projectName="quadrotor_sim" targetName="run_tests" />
-      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_move_quad" />
-      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="clean_test_results" />
-      <config projectName="quadrotor_sim" targetName="move_quad_server" />
-      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="make_plan" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_gencpp" />
-      <config projectName="quadrotor_sim" targetName="gmock_main" />
-      <config projectName="quadrotor_sim" targetName="doxygen" />
-      <config projectName="quadrotor_sim" targetName="add_two_ints_client" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="add_two_ints_server" />
+      <config projectName="quadrotor_sim" targetName="download_extra_data" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_cpp" />
       <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genpy" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="gtest" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="move_quad_server" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="make_plan" />
+      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_move_quad" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="gtest_main" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="gmock" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genpy" />
+      <config projectName="quadrotor_sim" targetName="gtest" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="clean_test_results" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genlisp" />
+      <config projectName="quadrotor_sim" targetName="move_quad_test_client" />
+      <config projectName="quadrotor_sim" targetName="add_two_ints_server" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_gencpp" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="add_two_ints_client" />
+      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_mc_plan" />
+      <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="tests" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_geneus" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_py" />
+      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_gennodejs" />
+      <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" />
-      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genlisp" />
-      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="download_extra_data" />
-      <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="gtest_main" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="doxygen" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="gmock_main" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_cpp" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -68,7 +68,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="" />
+    <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/make_plan.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/make_plan.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/move_quad_server.dir/src/move_quad_server.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/move_quad_server.dir/src/move_quad_server.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin/catkin_generated/version/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin/catkin_generated/version/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/installspace/quadrotor_sim.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/installspace/quadrotor_sim.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/installspace/quadrotor_simConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/installspace/quadrotor_simConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/pkg.installspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/stamps/quadrotor_sim/interrogate_setup_dot_py.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/stamps/quadrotor_sim/interrogate_setup_dot_py.py.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/catkin_generated/stamps/quadrotor_sim/pkg.pc.em.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/catkin_generated/stamps/quadrotor_sim/pkg.pc.em.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/lib/pkgconfig/quadrotor_sim.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/pkgconfig/quadrotor_sim.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/move_quad_server" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/move_quad_server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../devel/share/quadrotor_sim/cmake/quadrotor_simConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/share/quadrotor_sim/cmake/quadrotor_simConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/make_plan.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/make_plan.cpp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.move_quad_server">
+  <component name="RunManager" selected="CMake Application.make_plan">
     <configuration name="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="quadrotor_sim" TARGET_NAME="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -483,7 +500,10 @@
       <workItem from="1571714407403" duration="22923000" />
       <workItem from="1572554434486" duration="633000" />
       <workItem from="1572814562163" duration="13838000" />
-      <workItem from="1574034054585" duration="651000" />
+      <workItem from="1574034054585" duration="1418000" />
+      <workItem from="1575149205501" duration="2167000" />
+      <workItem from="1578010769628" duration="7145000" />
+      <workItem from="1579721578265" duration="6809000" />
     </task>
     <servers />
   </component>

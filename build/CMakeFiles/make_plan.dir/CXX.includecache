@@ -77,6 +77,12 @@ nav_msgs/MapMetaData.h
 /home/cody/catkin_ws/src/quadrotor_sim/src/nav_msgs/MapMetaData.h
 math.h
 -
+random
+-
+iostream
+-
+vector
+-
 
 /opt/ros/kinetic/include/geometry_msgs/Point.h
 string
