@@ -44,6 +44,9 @@ struct edge{
     edge* prevNode;
     edge* nextNode;
 };
+struct EulerAngles{
+    double roll, pitch, yaw;
+};
 class Graph{
 private:
     std::vector<std::vector<int>> adjacencyList;
@@ -186,12 +189,98 @@ int actionProgWiden(Graph *tree, int current_node){
     return newNode;
 }
 
+void quat2euler(geometry_msgs::Quaternion q, EulerAngles * RPY){
+    double sinr_cosp = 2*(q.w * q.x + q.y * q.z);
+    double cosr_cosp = 1 - 2 * (q.x * q.x + q.y * q.y);
+    RPY->roll = std::atan2(sinr_cosp,cosr_cosp);
+
+    //pitch
+    double sinp = 2 * (q.w * q.y - q.z * q.x);
+    if ( std::abs(sinp) >= 1){
+        RPY->pitch = std::copysign(M_PI / 2, sinp);
+    } else {
+        RPY->pitch = std::asin(sinp);
+    }
+    double siny_cosp = 2 * (q.w * q.z + q.x * q.y);
+    double cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
+    RPY->yaw = std::atan2(siny_cosp,cosy_cosp);
+}
+
+float forwardSimulate(State *input_state, int action_number){
+    //Should return a generated observation, a reward and the next state...
+
+    float x = input_state->robotPose.position.x;
+    float y = input_state->robotPose.position.y;
+
+    float action_reward  = -1;
+    int mapX = (x - input_state->map.info.origin.position.x) / input_state->map.info.resolution;
+    int mapY = (y - input_state->map.info.origin.position.y) / input_state->map.info.resolution;
+    //Pack into 2d array for neighbors data
+    float temp_map[input_state->map.info.height][input_state->map.info.width];
+    int row = 0;
+    int col = 0;
+    std::cout << "Width:" << input_state->map.info.width << std::endl;
+    std::cout << "Height:" << input_state->map.info.height << '\n' << input_state->map.data.size() << std::endl;
+
+    for (int j = 0; j < input_state->map.data.size(); j++){
+        std::cout << "b4:"<< row <<":" <<col << std::endl;
+        temp_map[row][col] = input_state->map.data[j];
+
+        if (col == 100){
+            row++;
+            col = 0;
+        } else {
+            col++;
+        }
+        std::cout <<"\n j: " << j << std::endl;
+    }
+
+    std::cout << "X Cell: " << mapX << std::endl;
+    geometry_msgs::Quaternion inputQuat = input_state->robotPose.orientation;
+    EulerAngles RPY;
+    quat2euler(inputQuat, &RPY);
+    std::cout << RPY.yaw << std::endl;
+    //Now get the action ides
+    int dist = 0;
+    switch (action_number) {
+        case 0: dist = 1;
+                action_reward = 1;
+            break;
+        case 1: RPY.yaw = RPY.yaw - M_PI / 2;
+            break;
+        case 2: RPY.yaw = RPY.yaw + M_PI / 2;
+            break;
+        case 3: dist = 2;
+                action_reward = 0;
+            break;
+        case -1: std::cout << "Failed to get correct node!" << std::endl;
+        default: std::cout << "Never should be here. Code 2" << std::endl;
+    }
+    if (RPY.yaw > 2 * M_PI ){
+        RPY.yaw -= 2 * M_PI;
+    } else if (RPY.yaw < 0){
+        RPY.yaw += 2 * M_PI;
+    }
+}
+
 float simulate(State stateIn, Graph tree , int d, int current_node) {
     //returns the total reward for the specified level of recursion
+    //Normal Vars:
+    double k_0 = 6.0;
+    double alpha_0 = 1.0/5.0;
+
     if (d == 0){
         return 0;
     }
     int action_node_number = actionProgWiden(&tree,current_node);
+    std::vector<int> observationChildren = tree.getAdjacentNodes(action_node_number);
+    adjNode * actionNode = tree.getNode(action_node_number);
+    int N_ha = actionNode->N;
+    int action_value = actionNode->action;
+    if (observationChildren.size() <= k_0*pow(N_ha,alpha_0)){ //means we should make a new node...probably
+        float q = forwardSimulate(&(actionNode->robotState), action_value);
+
+    }
 
 }
 bool plan(quadrotor_sim::mc_plan::Request  &req,
@@ -292,8 +381,37 @@ int main(int argc, char **argv)
     initialState.robotPose = initPose;
     Graph simulateTree;
     simulateTree.addNode(initialState,-1);
-    float Q = simulate(initialState,simulateTree,10,0);
-    
+/*    geometry_msgs::Quaternion testQuat;
+    testQuat.w = 1;
+    testQuat.x = 0.;
+    testQuat.y = 0;
+    testQuat.z = 0;*/
+
+    //EulerAngles result;
+    //quat2euler(testQuat, &result);
+    //std::cout << "angles: " << result.roll << '\n' << result.pitch << '\n' << result.yaw << std::endl;
+
+    //float Q = simulate(initialState,simulateTree,10,0);
+
+    //DEBUG:::: Building stuff for testing
+    nav_msgs::OccupancyGrid testing_map;
+    testing_map.info.resolution = 0.5;
+    testing_map.info.height = 100;
+    testing_map.info.width = 100;
+
+    std::cout << testing_map.info.width << std::endl;
+    std::vector<int8_t> testMap;
+    for (int j = 0; j < 10000; j++){
+        testMap.push_back(40);
+    }
+    std::cout << "check: " << (int) testMap[0] << std::endl;
+    //testing_map.d
+    testing_map.data = testMap;
+    State initial_state;
+    initial_state.map = testing_map;
+    initial_state.robotPose = initPose;
+    forwardSimulate(&initial_state,1);
+
     return 0;
 }
 
