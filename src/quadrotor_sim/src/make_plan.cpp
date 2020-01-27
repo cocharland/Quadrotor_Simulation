@@ -24,11 +24,20 @@ struct State {
     int mapX,mapY,mapZ;
 };
 struct adjNode{
+    adjNode(){
+        N = 0;
+        M = 0;
+        Q = 0;
+        action = -1;
+    }
     int nodeNum; //node Number
     bool observationNode;
     State robotState; //state of the system at this node.
     int action;
     std::vector<int> observation;
+    int N,M;
+    double Q;
+
 };
 struct edge{
     int node;
@@ -45,12 +54,14 @@ public:
     Graph(){
         numNodes = 0;
     }
-    void addNode(State nodeState){
+    int addNode(State nodeState, int action){
         adjNode nodeToAdd;
         nodeToAdd.robotState = nodeState;
         nodeToAdd.nodeNum = numNodes;
-        nodeToAdd.action = -1;
-
+        nodeToAdd.action = action;
+        nodeToAdd.N = 0;
+        nodeToAdd.M = 0;
+        nodeToAdd.Q = 0;
         nodeList.push_back(nodeToAdd);
         /*edge edgeToAdd; //NOTES:: Removed v0.01 in favor of vector of vector implementation
         edgeToAdd.node = numNodes-1;
@@ -62,6 +73,8 @@ public:
         list_into.push_back(numNodes); //Probably will need to fix implementation of node referencing
         adjacencyList.push_back(list_into);
         numNodes++;
+
+        return nodeToAdd.nodeNum;
     }
     adjNode * getNode(int nodeNum){
         for (int i = 0;i<numNodes;i++){
@@ -118,23 +131,59 @@ public:
         return adjacency;
     }
 };
-geometry_msgs::Pose actionProgWiden(Graph tree, int current_node){
-    adjNode *currentNode = tree.getNode(current_node);
-    int proposedAction = rand() % 4; // generate number between 0 and 3
-    //Notes: Node we have is going to be an observation Node should have up to four children.
 
+int actionProgWiden(Graph *tree, int current_node){
+    adjNode *currentNode = tree->getNode(current_node);
+    int proposedAction = rand() % 4; // generate number between 0 and 3
+    //DEBUG::
+    //proposedAction = 0;
+    //Notes: Node we have is going to be an observation Node should have up to four children.
+    int newNode;
     std::cout << proposedAction << std::endl; //DEBUG
-    std::vector<int> children = tree.getAdjacentNodes(current_node);
-    std::cout << children.size() << std::endl;
+    std::vector<int> children = tree->getAdjacentNodes(current_node);
+    for (int j = 0; j < children.size();j++){
+        std::cout<<"Child: " <<children[j]<<std::endl;
+    }
     bool new_node = false;
+    //std::cout << "Num Kids: " << children.size() << std::endl;
     if ( children.size() == 1){
         //There are no attached nodes to the current node
         std::cout << "No kids" << std::endl;
         //Need to build a new node no matter what
         new_node = true;
+        State actionNodeState;
+        actionNodeState = currentNode->robotState;
+        newNode = tree->addNode(actionNodeState, proposedAction);
+        std::cout << "Created Node #: " << newNode <<"\n Connected to : "<< current_node << std::endl;
+        tree->addEdge(current_node,newNode);
 
+    } else {
+        //Now need to see if the node w/ action already exists
+        bool found = false;
+        for (int ii = 1; ii < children.size(); ii++){
+            //looking through the adjacency vector, the first element is the from node
+            adjNode tmp = *(tree->getNode(children[ii]));
+            //std::cout << "Tmp Is: " << children[ii] <<"\nTmp Holds: " << tmp.action << std::endl; //DEBUG::
+            if (tmp.action == proposedAction){
+                newNode = tmp.nodeNum; //Grab the matched node
+                found = true;
+                tree->getNode(children[ii])->N++; //increment N(ha)
+                std::cout << "Found Matching Action Node: " << tmp.nodeNum << std::endl; //DEBUG::
+                break;
+            }
+        }
+        if (!found){  //Means there are children but none match the action.
+            //Need to build a new node now
+            State actionNodeState;
+            actionNodeState = currentNode->robotState; //copy node state, not sure if this is needed..... probably isn't
+            newNode = tree->addNode(actionNodeState, proposedAction);
+            std::cout << "Created Node #: " << newNode <<"\n Connected to : "<< current_node << std::endl;
+            tree->addEdge(current_node,newNode);
+        }
     }
-
+    //Now increment N(h)
+    currentNode->N++;
+    return newNode;
 }
 
 float simulate(State stateIn, Graph tree , int d, int current_node) {
@@ -142,7 +191,7 @@ float simulate(State stateIn, Graph tree , int d, int current_node) {
     if (d == 0){
         return 0;
     }
-    geometry_msgs::Pose action = actionProgWiden(tree,current_node);
+    int action_node_number = actionProgWiden(&tree,current_node);
 
 }
 bool plan(quadrotor_sim::mc_plan::Request  &req,
@@ -175,7 +224,7 @@ bool plan(quadrotor_sim::mc_plan::Request  &req,
 
     int n = 100; //Number of tree particles to generate.
     Graph tree;
-    tree.addNode(initialstate);
+    tree.addNode(initialstate,-1);
     for (int j = 1; j < n; j++){
 
 
@@ -195,7 +244,7 @@ bool plan(quadrotor_sim::mc_plan::Request  &req,
 
 int main(int argc, char **argv)
 {
-    std::default_random_engine gene (1);
+    std::default_random_engine gene (1908);
     std::srand(std::time(NULL));
     std::cout << "test" << std::endl;
     ros::init(argc, argv, "mc_plan");
@@ -215,22 +264,36 @@ int main(int argc, char **argv)
     initialState.robotPose = initPose;
     //float vall = simulate(stateIn, tree, explorationDepth,currentNode);
     Graph testTree;
-    testTree.addNode(initialState);
+    testTree.addNode(initialState, -1);
     std::cout << testTree.getNode(0)->robotState.robotPose << std::endl;
     initialState.robotPose.position.x = -10;
     initialState.robotPose.position.y = -10;
 
-    testTree.addNode(initialState);
+    testTree.addNode(initialState, -1);
     std::cout << testTree.getNode(1)->robotState.robotPose << std::endl;
     testTree.addEdge(0,1);
 
 
-    testTree.addNode(initialState);
+    testTree.addNode(initialState, -1);
     testTree.addEdge(0,0);
     testTree.addEdge(1,2);
 
 
-    actionProgWiden(testTree,2);
+    int newNode = actionProgWiden(&testTree,2);
+    newNode = actionProgWiden(&testTree,2);
+
+    std::cout << "Created Node: " << newNode <<" \n With Action: "<< testTree.getNode(newNode)->action << std::endl;
+    std::cout << testTree.getNode(2)->N << std::endl;
+
+    //Now Working on Simulate::
+    initPose.position.z = 0;
+    initPose.position.x = 10;
+    initPose.position.y = 10;
+    initialState.robotPose = initPose;
+    Graph simulateTree;
+    simulateTree.addNode(initialState,-1);
+    float Q = simulate(initialState,simulateTree,10,0);
+    
     return 0;
 }
 
