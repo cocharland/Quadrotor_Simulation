@@ -975,6 +975,33 @@ src/add_two_ints_server.cpp.s:
 	$(MAKE) -f CMakeFiles/add_two_ints_server.dir/build.make CMakeFiles/add_two_ints_server.dir/src/add_two_ints_server.cpp.s
 .PHONY : src/add_two_ints_server.cpp.s
 
+src/generateObservation.o: src/generateObservation.cpp.o
+
+.PHONY : src/generateObservation.o
+
+# target to build an object file
+src/generateObservation.cpp.o:
+	$(MAKE) -f CMakeFiles/make_plan.dir/build.make CMakeFiles/make_plan.dir/src/generateObservation.cpp.o
+.PHONY : src/generateObservation.cpp.o
+
+src/generateObservation.i: src/generateObservation.cpp.i
+
+.PHONY : src/generateObservation.i
+
+# target to preprocess a source file
+src/generateObservation.cpp.i:
+	$(MAKE) -f CMakeFiles/make_plan.dir/build.make CMakeFiles/make_plan.dir/src/generateObservation.cpp.i
+.PHONY : src/generateObservation.cpp.i
+
+src/generateObservation.s: src/generateObservation.cpp.s
+
+.PHONY : src/generateObservation.s
+
+# target to generate assembly for a file
+src/generateObservation.cpp.s:
+	$(MAKE) -f CMakeFiles/make_plan.dir/build.make CMakeFiles/make_plan.dir/src/generateObservation.cpp.s
+.PHONY : src/generateObservation.cpp.s
+
 src/make_plan.o: src/make_plan.cpp.o
 
 .PHONY : src/make_plan.o
@@ -1133,6 +1160,9 @@ help:
 	@echo "... src/add_two_ints_server.o"
 	@echo "... src/add_two_ints_server.i"
 	@echo "... src/add_two_ints_server.s"
+	@echo "... src/generateObservation.o"
+	@echo "... src/generateObservation.i"
+	@echo "... src/generateObservation.s"
 	@echo "... src/make_plan.o"
 	@echo "... src/make_plan.i"
 	@echo "... src/make_plan.s"

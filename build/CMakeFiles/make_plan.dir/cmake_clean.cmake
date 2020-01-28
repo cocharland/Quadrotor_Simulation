@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/cody/catkin_ws/devel/lib/quadrotor_sim/make_plan"
   "/home/cody/catkin_ws/devel/lib/quadrotor_sim/make_plan.pdb"
+  "CMakeFiles/make_plan.dir/src/generateObservation.cpp.o"
   "CMakeFiles/make_plan.dir/src/make_plan.cpp.o"
 )
 

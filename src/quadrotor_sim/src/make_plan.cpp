@@ -16,6 +16,8 @@
 #include <random>
 #include <iostream>
 #include <vector>
+#include <chrono>
+#include "generateObservation.h"
 
 struct State {
     geometry_msgs::Pose robotPose;
@@ -46,12 +48,16 @@ struct edge{
 };
 struct EulerAngles{
     double roll, pitch, yaw;
+    EulerAngles(){ //construct to 0
+        roll = 0;
+        pitch = 0;
+        yaw = 0;
+    }
 };
 class Graph{
 private:
     std::vector<std::vector<int>> adjacencyList;
     std::vector<adjNode> nodeList;
-    std::vector<edge> listArray;
 public:
     int numNodes;
     Graph(){
@@ -139,7 +145,7 @@ int actionProgWiden(Graph *tree, int current_node){
     adjNode *currentNode = tree->getNode(current_node);
     int proposedAction = rand() % 4; // generate number between 0 and 3
     //DEBUG::
-    //proposedAction = 0;
+    proposedAction = 1;
     //Notes: Node we have is going to be an observation Node should have up to four children.
     int newNode;
     std::cout << proposedAction << std::endl; //DEBUG
@@ -205,6 +211,24 @@ void quat2euler(geometry_msgs::Quaternion q, EulerAngles * RPY){
     double cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
     RPY->yaw = std::atan2(siny_cosp,cosy_cosp);
 }
+void euler2quat(geometry_msgs::Quaternion *q, EulerAngles RPY){
+    // conversion from RPY to quaternions
+    // Will put the quaternion into the referenced geometry_msg
+    double cy = cos(RPY.yaw * 0.5);
+    double sy = sin(RPY.yaw * 0.5);
+    double cp = cos(RPY.pitch * 0.5);
+    double sp = sin(RPY.pitch * 0.5);
+    double cr = cos(RPY.roll * 0.5);
+    double sr = sin(RPY.roll * 0.5);
+
+    q->w = cy * cp * cr + sy * sp * sr;
+    q->x = cy * cp * sr - sy * sp * cr;
+    q->y = sy * cp * sr + cy * sp * cr;
+    q->z = sy * cp * cr - cy * sp * sr;
+    //Done
+}
+
+
 
 float forwardSimulate(State *input_state, int action_number){
     //Should return a generated observation, a reward and the next state...
@@ -223,32 +247,35 @@ float forwardSimulate(State *input_state, int action_number){
     std::cout << "Height:" << input_state->map.info.height << '\n' << input_state->map.data.size() << std::endl;
 
     for (int j = 0; j < input_state->map.data.size(); j++){
-        std::cout << "b4:"<< row <<":" <<col << std::endl;
         temp_map[row][col] = input_state->map.data[j];
-
         if (col == 100){
             row++;
             col = 0;
         } else {
             col++;
         }
-        std::cout <<"\n j: " << j << std::endl;
     }
 
-    std::cout << "X Cell: " << mapX << std::endl;
+    std::cout << "X Cell: " << mapX << "\nY Cell: "<< mapY <<  std::endl;
     geometry_msgs::Quaternion inputQuat = input_state->robotPose.orientation;
     EulerAngles RPY;
     quat2euler(inputQuat, &RPY);
+    geometry_msgs::Pose u_t;
     std::cout << RPY.yaw << std::endl;
     //Now get the action ides
+    EulerAngles yaw_change;
+    yaw_change.yaw = 0;
+    std::cout << yaw_change.roll << std::endl;
     int dist = 0;
     switch (action_number) {
         case 0: dist = 1;
                 action_reward = 1;
             break;
         case 1: RPY.yaw = RPY.yaw - M_PI / 2;
+                yaw_change.yaw = -1 * M_PI / 2;
             break;
         case 2: RPY.yaw = RPY.yaw + M_PI / 2;
+                 yaw_change.yaw = M_PI / 2;
             break;
         case 3: dist = 2;
                 action_reward = 0;
@@ -256,11 +283,21 @@ float forwardSimulate(State *input_state, int action_number){
         case -1: std::cout << "Failed to get correct node!" << std::endl;
         default: std::cout << "Never should be here. Code 2" << std::endl;
     }
-    if (RPY.yaw > 2 * M_PI ){
+    if (RPY.yaw > 2 * M_PI ){ //bound fixup
         RPY.yaw -= 2 * M_PI;
     } else if (RPY.yaw < 0){
         RPY.yaw += 2 * M_PI;
     }
+    std::cout << RPY.yaw << std::endl;
+    //Now the robot it pointed in the correct direction, but need to move in pointed direction.
+    geometry_msgs::Quaternion q_u;
+    euler2quat(&q_u, yaw_change );
+    u_t.position.x = std::cos(RPY.yaw)*dist;
+    u_t.position.y = std::sin(RPY.yaw)*dist; //change in pose stored
+    u_t.position.z = 0;
+    u_t.orientation = q_u;
+    //std::cout << u_t.orientation.w <<" : " << u_t.orientation.z << std::endl;
+
 }
 
 float simulate(State stateIn, Graph tree , int d, int current_node) {
@@ -401,17 +438,31 @@ int main(int argc, char **argv)
 
     std::cout << testing_map.info.width << std::endl;
     std::vector<int8_t> testMap;
+    std::vector<int> obsMap;
     for (int j = 0; j < 10000; j++){
         testMap.push_back(40);
+        obsMap.push_back(j / 100);
     }
-    std::cout << "check: " << (int) testMap[0] << std::endl;
+    //std::cout << "check: " << (int) testMap[0] << std::endl;
     //testing_map.d
     testing_map.data = testMap;
     State initial_state;
     initial_state.map = testing_map;
     initial_state.robotPose = initPose;
-    forwardSimulate(&initial_state,1);
+    initial_state.robotPose.orientation.w = 1;
 
+    forwardSimulate(&initial_state,1);
+    auto start = std::chrono::high_resolution_clock::now();
+    std::vector<int> testObs = generate_observation(obsMap);
+
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+    int sum = 0;
+    for (int j = 0; j < testObs.size(); j++){
+        sum += testObs[j];
+    }
+    std::cout << sum<< std::endl;
     return 0;
 }
 

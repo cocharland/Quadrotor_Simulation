@@ -1090,6 +1090,12 @@
 		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/add_two_ints_server.cpp">
 			<Option target="add_two_ints_server"/>
 		</Unit>
+		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/generateObservation.cpp">
+			<Option target="make_plan"/>
+		</Unit>
+		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/generateObservation.h">
+			<Option target="make_plan"/>
+		</Unit>
 		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/make_plan.cpp">
 			<Option target="make_plan"/>
 		</Unit>
