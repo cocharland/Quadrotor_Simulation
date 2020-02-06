@@ -19,9 +19,12 @@
 #include <chrono>
 #include "generateObservation.h"
 
+
+bool DEBUG = false;
+
 struct State {
     geometry_msgs::Pose robotPose;
-    nav_msgs::OccupancyGrid map; //unseen == -1
+    nav_msgs::OccupancyGrid map; //unseen == -1; 0-100
     nav_msgs::OccupancyGrid houghMask; //value that has been used to weight the graph by walls, used to prevent looping hough walls.
     int mapX,mapY,mapZ;
 };
@@ -239,6 +242,9 @@ float forwardSimulate(State *input_state, int action_number){
     float action_reward  = -1;
     int mapX = (x - input_state->map.info.origin.position.x) / input_state->map.info.resolution;
     int mapY = (y - input_state->map.info.origin.position.y) / input_state->map.info.resolution;
+    input_state->mapX = mapX;
+    input_state->mapY = mapY;
+
     //Pack into 2d array for neighbors data
     float temp_map[input_state->map.info.height][input_state->map.info.width];
     int row = 0;
@@ -256,7 +262,7 @@ float forwardSimulate(State *input_state, int action_number){
         }
     }
 
-    std::cout << "X Cell: " << mapX << "\nY Cell: "<< mapY <<  std::endl;
+    //std::cout << "X Cell: " << mapX << "\nY Cell: "<< mapY <<  std::endl;
     geometry_msgs::Quaternion inputQuat = input_state->robotPose.orientation;
     EulerAngles RPY;
     quat2euler(inputQuat, &RPY);
@@ -281,22 +287,45 @@ float forwardSimulate(State *input_state, int action_number){
                 action_reward = 0;
             break;
         case -1: std::cout << "Failed to get correct node!" << std::endl;
-        default: std::cout << "Never should be here. Code 2" << std::endl;
+                break;
+        default: std::cout << "Never should be here. Code: 2" << std::endl;
     }
     if (RPY.yaw > 2 * M_PI ){ //bound fixup
         RPY.yaw -= 2 * M_PI;
     } else if (RPY.yaw < 0){
         RPY.yaw += 2 * M_PI;
     }
-    std::cout << RPY.yaw << std::endl;
-    //Now the robot it pointed in the correct direction, but need to move in pointed direction.
+    if(DEBUG){
+        std::cout << RPY.yaw << std::endl;
+    }
+    //Now the robot is pointed in the correct direction, but need to move in pointed direction.
     geometry_msgs::Quaternion q_u;
     euler2quat(&q_u, yaw_change );
     u_t.position.x = std::cos(RPY.yaw)*dist;
     u_t.position.y = std::sin(RPY.yaw)*dist; //change in pose stored
     u_t.position.z = 0;
     u_t.orientation = q_u;
+    mapX = (x - input_state->map.info.origin.position.x + u_t.position.x) / input_state->map.info.resolution;
+    mapY = (y - input_state->map.info.origin.position.y + u_t.position.y) / input_state->map.info.resolution;
+
     //std::cout << u_t.orientation.w <<" : " << u_t.orientation.z << std::endl;
+    //Build an observation:
+    std::vector<int8_t> observation = generate_observation(input_state->map.data);
+    //Now: reward mapping
+    //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
+    int observation_reward = 0;
+    std::vector<int8_t> ray_result = rayCast(input_state->map.data,RPY.yaw,mapX,mapY,input_state->map.info.width,input_state->map.info.height,input_state->map.info.resolution);
+    for (int j = 0; j < ray_result.size(); j++){
+        if (ray_result.at(j) != -1){
+            //now we are in the seen area
+            if(input_state->map.data.at(j) == -1){
+                observation_reward++;
+            }
+        }
+    }
+    //impact reward
+    //Need to map from the vector to a point in the belief map *after* the motion
+    //Tomorrow::try to get it to nav around a bit
 
 }
 
@@ -438,10 +467,10 @@ int main(int argc, char **argv)
 
     std::cout << testing_map.info.width << std::endl;
     std::vector<int8_t> testMap;
-    std::vector<int> obsMap;
+    std::vector<int8_t> obsMap;
     for (int j = 0; j < 10000; j++){
-        testMap.push_back(40);
-        obsMap.push_back(j / 100);
+        testMap.push_back(2);
+        obsMap.push_back((double) j / 100);
     }
     //std::cout << "check: " << (int) testMap[0] << std::endl;
     //testing_map.d
@@ -451,18 +480,26 @@ int main(int argc, char **argv)
     initial_state.robotPose = initPose;
     initial_state.robotPose.orientation.w = 1;
 
-    forwardSimulate(&initial_state,1);
+    forwardSimulate(&initial_state,0);
     auto start = std::chrono::high_resolution_clock::now();
-    std::vector<int> testObs = generate_observation(obsMap);
+    std::vector<int8_t> testObs = generate_observation(obsMap);
+    if (DEBUG){
+                auto stop = std::chrono::high_resolution_clock::now();
+                auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+                std::cout << duration.count() << std::endl;
+                int sum = 0;
+                for (int j = 0; j < testObs.size(); j++){
+                    sum += testObs[j];
+                }
+        }
+    //TODO::
+    // Additional functionality:
+    //  Need to complete 'Simulate' framework
+    //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
+    std::vector<int8_t> ray_result =  rayCast(testMap,M_PI,10,10,100,100,testing_map.info.resolution);
+    //reward mappings:
 
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 
-    int sum = 0;
-    for (int j = 0; j < testObs.size(); j++){
-        sum += testObs[j];
-    }
-    std::cout << sum<< std::endl;
     return 0;
 }
 

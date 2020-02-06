@@ -9,4 +9,5 @@
 
 #endif //QUADROTOR_SIM_GENERATEOBSERVATION_H
 
-std::vector<int> generate_observation( std::vector<int> );
+std::vector<int8_t> generate_observation(std::vector<int8_t > );
+std::vector<int8_t> rayCast(std::vector<int8_t>, float theta, int mapX, int mapY, int, int, double);
