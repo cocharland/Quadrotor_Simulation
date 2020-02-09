@@ -35,9 +35,8 @@
   - [ ] Forward Simulate
   - [ ] New Action Definitions?
 
-## Hardware
 
-Yikes
+
 
 
 
