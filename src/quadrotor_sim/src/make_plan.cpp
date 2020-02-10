@@ -17,6 +17,7 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include <queue>
 #include "generateObservation.h"
 
 
@@ -34,9 +35,14 @@ struct adjNode{
         M = 0;
         Q = 0;
         action = -1;
+        color = 0;
+        d = -1;
+        pi = -1;
     }
     int nodeNum; //node Number
+    int d, pi;
     bool observationNode;
+    uint8_t color; //0 = white; 1 = grey; 2 = black
     State robotState; //state of the system at this node.
     int action;
     std::vector<int> observation;
@@ -97,30 +103,6 @@ public:
     }
     void addEdge(int fromNode, int toNode){
         //need to get the current edge in the list.
-        /*
-        edge head;
-        for (int i = 0; i < numNodes; i++){
-            int nodeToCheck = listArray[i].node;
-            std::cout << nodeToCheck << std::endl;
-            //std::cout << listArray[i].node->robotState.robotPose << std::endl;
-            if (nodeToCheck == fromNode){
-                head = listArray[i];
-                break;
-            }
-        }
-        //now have the ll for the from node...
-        edge edgeToadd;
-        edge currentEdge = head;
-        while ( currentEdge.nextNode != NULL){ //iterate to the end of the list.
-            currentEdge = *currentEdge.nextNode;
-        }
-
-        edgeToadd.prevNode = &currentEdge;
-        currentEdge.nextNode = &edgeToadd;
-        edgeToadd.node = toNode; //add the edge to the list.
-        edgeToadd.nextNode = nullptr;
-        listArray.push_back(edgeToadd);
-         */
         for (int ii = 0; ii < adjacencyList.size(); ii++){
             //Interate through the vectors
             std::vector<int> tmp_container = adjacencyList[ii];
@@ -141,6 +123,102 @@ public:
             }
         }
         return adjacency;
+    }
+    int removeEdge(int fromNode, int toNode){
+        //goto node
+        bool found = false;
+        for (int j = 0; j < adjacencyList.size(); j++){
+            std::vector<int> tmp_container = adjacencyList[j];
+            if (tmp_container[0] == fromNode){
+                //were at the right point
+                for(int k = 1; k < tmp_container.size(); k++){
+                    if (tmp_container.at(k)==toNode){
+                        //Now we have the link
+                        std::iter_swap(adjacencyList.at(j).begin()+k, adjacencyList.at(j).end()-1);
+                        found = true;
+                        adjacencyList.at(j).pop_back(); //remove the element from the end of the list
+                        return 0;
+                    }
+                }
+            }
+        }
+        return 2;
+    }
+    void node_numbering_fixup(int rootNode){
+        //function takes the root node sets its number to 0; and makes all other nodes logical increments from it.
+        std::vector<int> number_mapping;
+        number_mapping.push_back(rootNode);
+        getNode(rootNode)->nodeNum = 0;
+        auto it = nodeList.begin();
+        for (int j = 0; j < nodeList.size(); j++){
+            if(nodeList.at(j).nodeNum == rootNode){
+                break;
+            }
+            it++;
+        }
+        std::iter_swap(it,nodeList.begin()); //switch the root node so it is in location 0
+        int currentNode = 1;
+        for (int j = 1; j < nodeList.size(); j++){
+            number_mapping.push_back(nodeList.at(j).nodeNum);
+            nodeList.at(j).nodeNum = currentNode;
+            currentNode++;
+        }
+        
+        //now remap the adjacency lists
+        for (int j = 0; j < adjacencyList.size(); j++){
+            std::vector<int> tmp_container = adjacencyList.at(j);
+            for (int k = 0; k < tmp_container.size(); k++){
+                int nodeTochange = adjacencyList.at(j).at(k);
+                std::cout << nodeTochange << std::endl;
+
+            }
+        }
+    }
+    int prune_tree(int rootNode){
+        //this performs BFS to find dosconnected portions of tree and removes them
+        for (int vertex = 0; vertex < nodeList.size(); vertex++){
+            nodeList.at(vertex).color=0; //mark all the nodes as white
+            nodeList.at(vertex).d = -1;
+            nodeList.at(vertex).pi = -1; // mark as uninitilized
+            if (nodeList.at(vertex).nodeNum == rootNode){
+                nodeList.at(vertex).color = 1;
+                nodeList.at(vertex).d = 0;
+                nodeList.at(vertex).pi = -1;
+            }
+        }
+        //now enter BFS
+        std::queue<int> Node_Queue;
+        Node_Queue.push(rootNode); //queue first node
+
+        while (!Node_Queue.empty()){
+            int u = Node_Queue.front();
+            Node_Queue.pop();
+            std::vector<int> adj = getAdjacentNodes(u);
+            for(int v = 0; v < adj.size(); v++){
+                if (getNode(adj.at(v))->color == 0){
+                    getNode(adj.at(v))->color = 1; //set color to grey
+                    getNode(adj.at(v))->d++;
+                    getNode(adj.at(v))->pi = u;
+                    Node_Queue.push(adj.at(v));
+                }
+            }
+            getNode(u)->color = 2; //set color to black
+            std::cout << "U: " << u << std::endl;
+        }
+        //now remove all the nodes that are not black
+        for (int j = 0; j < nodeList.size(); j++){
+            if (nodeList.at(j).color != 2){
+                //remove the node and the adjacency list
+                std::iter_swap(nodeList.begin()+j,nodeList.end()-1); //swap the node to the end
+                nodeList.pop_back();
+                std::iter_swap(adjacencyList.begin()+j,adjacencyList.end()-1);
+                adjacencyList.pop_back();
+                j--;
+            }
+            std::cout << "J: " << j << std::endl;
+        }
+        //now only connected graph remains; need to reorder nodes to stay ontop of numbering
+        node_numbering_fixup(rootNode);
     }
 };
 
@@ -430,10 +508,26 @@ int main(int argc, char **argv)
 
 
     testTree.addNode(initialState, -1);
-    testTree.addEdge(0,0);
+    testTree.addEdge(0,2);
     testTree.addEdge(1,2);
+    testTree.addNode(initialState,1);
+    testTree.addEdge(0,3);
+    testTree.addEdge(1,5);
+    testTree.addEdge(5,6);
 
+    std::vector<int> adjacency_list = testTree.getAdjacentNodes(0);
 
+    for (int j =0; j < adjacency_list.size();j++){
+        std::cout << adjacency_list.at(j) << std::endl;
+    }
+    testTree.removeEdge(0,1);
+    adjacency_list = testTree.getAdjacentNodes(0);
+    std::cout << "------" << std::endl;
+    for (int j = 0; j < adjacency_list.size(); j++){
+        std::cout << adjacency_list.at(j) << std::endl;
+    }
+    testTree.prune_tree(0);
+    return 0;
     int newNode = actionProgWiden(&testTree,2);
     newNode = actionProgWiden(&testTree,2);
 

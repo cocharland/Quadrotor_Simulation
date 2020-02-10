@@ -79,6 +79,9 @@ move_quad_test_client_EXTERNAL_OBJECTS =
 
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: CMakeFiles/move_quad_test_client.dir/src/move_quad_test_client.cpp.o
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: CMakeFiles/move_quad_test_client.dir/build.make
+/home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libactionlib.so
+/home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libmessage_filters.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libroscpp.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /usr/lib/x86_64-linux-gnu/libboost_signals.so
@@ -88,6 +91,7 @@ move_quad_test_client_EXTERNAL_OBJECTS =
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libtf2.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/librostime.so
 /home/cody/catkin_ws/devel/lib/quadrotor_sim/move_quad_test_client: /opt/ros/kinetic/lib/libcpp_common.so
