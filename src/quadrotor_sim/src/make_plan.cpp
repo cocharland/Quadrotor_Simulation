@@ -174,6 +174,7 @@ public:
             }
         }
     }
+    
     int prune_tree(int rootNode){
         //this performs BFS to find dosconnected portions of tree and removes them
         for (int vertex = 0; vertex < nodeList.size(); vertex++){
