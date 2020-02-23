@@ -228,6 +228,6 @@ add_executable(move_quad_test_client src/move_quad_test_client.cpp)
 target_link_libraries(move_quad_test_client ${catkin_LIBRARIES})
 add_dependencies(move_quad_test_client quadrotor_sim_gencpp)
 
-add_executable(make_plan src/make_plan.cpp src/generateObservation.cpp src/generateObservation.h)
+add_executable(make_plan src/make_plan.cpp src/generateObservation.cpp src/generateObservation.h src/Graph.cpp src/Graph.h src/Structures.h)
 target_link_libraries(make_plan ${catkin_LIBRARIES})
 add_dependencies(make_plan quadrotor_sim_gencpp)

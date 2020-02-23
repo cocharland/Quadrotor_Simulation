@@ -4,6 +4,4 @@ close all
 data = csvread('Test.txt');
 image(data,'CDataMapping','scaled')
 
-data = csvread('TestCol.txt');
-figure
-image(data,'CDataMapping','scaled')
+data = csvread('TestCol.txt')

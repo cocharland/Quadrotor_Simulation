@@ -1184,6 +1184,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/Graph.cpp">
+			<Option target="make_plan"/>
+		</Unit>
+		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/Graph.h">
+			<Option target="make_plan"/>
+		</Unit>
+		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/Structures.h">
+			<Option target="make_plan"/>
+		</Unit>
 		<Unit filename="/home/cody/catkin_ws/src/quadrotor_sim/src/add_two_ints_client.cpp">
 			<Option target="add_two_ints_client"/>
 		</Unit>

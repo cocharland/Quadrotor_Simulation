@@ -41,7 +41,7 @@ std::vector<int8_t> rayCast(std::vector<int8_t> beliefMap, float theta, int mapX
         temp_map[row][col] = beliefMap[j];
         collated_observation[row][col] = observation.at(j);
         resulting_obs[row][col] = -1;
-        if (col == map_limit_x){
+        if (col == map_limit_x-1){
             row++;
             col = 0;
         } else {
