@@ -25,7 +25,7 @@ bool DEBUG = false;
 
 struct State {
     geometry_msgs::Pose robotPose;
-    nav_msgs::OccupancyGrid map; //unseen == -1; 0-100
+    nav_msgs::OccupancyGrid map; //unseen == -1; 0-100 belief map of the robot....
     nav_msgs::OccupancyGrid houghMask; //value that has been used to weight the graph by walls, used to prevent looping hough walls.
     int mapX,mapY,mapZ;
 };
@@ -148,7 +148,7 @@ public:
         //function takes the root node sets its number to 0; and makes all other nodes logical increments from it.
         std::vector<int> number_mapping;
         number_mapping.push_back(rootNode);
-        getNode(rootNode)->nodeNum = 0;
+       std::cout << "ROOT: " << rootNode << std::endl;
         auto it = nodeList.begin();
         for (int j = 0; j < nodeList.size(); j++){
             if(nodeList.at(j).nodeNum == rootNode){
@@ -156,6 +156,7 @@ public:
             }
             it++;
         }
+        getNode(rootNode)->nodeNum = 0;
         std::iter_swap(it,nodeList.begin()); //switch the root node so it is in location 0
         int currentNode = 1;
         for (int j = 1; j < nodeList.size(); j++){
@@ -163,14 +164,12 @@ public:
             nodeList.at(j).nodeNum = currentNode;
             currentNode++;
         }
-        
         //now remap the adjacency lists
         for (int j = 0; j < adjacencyList.size(); j++){
             std::vector<int> tmp_container = adjacencyList.at(j);
             for (int k = 0; k < tmp_container.size(); k++){
                 int nodeTochange = adjacencyList.at(j).at(k);
                 std::cout << nodeTochange << std::endl;
-
             }
         }
     }
@@ -211,9 +210,10 @@ public:
             if (nodeList.at(j).color != 2){
                 //remove the node and the adjacency list
                 std::iter_swap(nodeList.begin()+j,nodeList.end()-1); //swap the node to the end
-                nodeList.pop_back();
+                nodeList.pop_back(); //remove from the tree
                 std::iter_swap(adjacencyList.begin()+j,adjacencyList.end()-1);
                 adjacencyList.pop_back();
+                numNodes--;
                 j--;
             }
             std::cout << "J: " << j << std::endl;
@@ -233,7 +233,7 @@ int actionProgWiden(Graph *tree, int current_node){
     std::cout << proposedAction << std::endl; //DEBUG
     std::vector<int> children = tree->getAdjacentNodes(current_node);
     for (int j = 0; j < children.size();j++){
-        std::cout<<"Child: " <<children[j]<<std::endl;
+        std::cout<< "Child: " <<children[j]<<std::endl;
     }
     bool new_node = false;
     //std::cout << "Num Kids: " << children.size() << std::endl;
@@ -390,6 +390,10 @@ float forwardSimulate(State *input_state, int action_number){
     //std::cout << u_t.orientation.w <<" : " << u_t.orientation.z << std::endl;
     //Build an observation:
     std::vector<int8_t> observation = generate_observation(input_state->map.data);
+
+    // Need to change the probabilities over the map here:
+
+
     //Now: reward mapping
     //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
     int observation_reward = 0;
@@ -408,7 +412,7 @@ float forwardSimulate(State *input_state, int action_number){
 
 }
 
-float simulate(State stateIn, Graph tree , int d, int current_node) {
+float simulate(State stateIn, Graph *tree , int d, int current_node) {
     //returns the total reward for the specified level of recursion
     //Normal Vars:
     double k_0 = 6.0;
@@ -417,9 +421,9 @@ float simulate(State stateIn, Graph tree , int d, int current_node) {
     if (d == 0){
         return 0;
     }
-    int action_node_number = actionProgWiden(&tree,current_node);
-    std::vector<int> observationChildren = tree.getAdjacentNodes(action_node_number);
-    adjNode * actionNode = tree.getNode(action_node_number);
+    int action_node_number = actionProgWiden(tree, current_node);
+    std::vector<int> observationChildren = tree->getAdjacentNodes(action_node_number);
+    adjNode * actionNode = tree->getNode(action_node_number);
     int N_ha = actionNode->N;
     int action_value = actionNode->action;
     if (observationChildren.size() <= k_0*pow(N_ha,alpha_0)){ //means we should make a new node...probably
@@ -431,6 +435,7 @@ float simulate(State stateIn, Graph tree , int d, int current_node) {
 bool plan(quadrotor_sim::mc_plan::Request  &req,
          quadrotor_sim::mc_plan::Response &res)
 {
+    //Request contains occ grid, and geometry msg current pose
     nav_msgs::OccupancyGrid gridIn = req.ProjectedGrid;
     geometry_msgs::Pose poseIn = req.currentPose;
 
@@ -459,8 +464,9 @@ bool plan(quadrotor_sim::mc_plan::Request  &req,
     int n = 100; //Number of tree particles to generate.
     Graph tree;
     tree.addNode(initialstate,-1);
+    int rootNode = 0;
     for (int j = 1; j < n; j++){
-
+        simulate(initialstate, &tree, 10, rootNode); //buildup the tree
 
     }
     //check the neighbors for occupancy
@@ -528,7 +534,11 @@ int main(int argc, char **argv)
         std::cout << adjacency_list.at(j) << std::endl;
     }
     testTree.prune_tree(0);
-    return 0;
+
+    //float res = forwardSimulate(initialState,0);
+    //forwardSimulate(&initialState,0);
+    //return 0;
+
     int newNode = actionProgWiden(&testTree,2);
     newNode = actionProgWiden(&testTree,2);
 

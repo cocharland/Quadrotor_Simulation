@@ -84,9 +84,10 @@ std::vector<int8_t> rayCast(std::vector<int8_t> beliefMap, float theta, int mapX
             }
         }
     }
-    /*
+    // For testing, writes the map to a file for matlab to look at.
     std::ofstream testOut;
     testOut.open("Test.txt");
+    std::cout << "MapLimX " << map_limit_x << std::endl;
     for (int row = 0; row < map_limit_y;row++){
         for (int col = 0; col < map_limit_x;col++){
             testOut << std::to_string(resulting_obs[row][col]);
@@ -113,7 +114,7 @@ std::vector<int8_t> rayCast(std::vector<int8_t> beliefMap, float theta, int mapX
         testOutC << '\n';
     }
     testOutC.close();
-    */
+
     std::vector<int8_t > output;
     row = 0;
     col = 0;

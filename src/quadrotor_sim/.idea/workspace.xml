@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genlisp" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="quadrotor_sim" targetName="doxygen" />
       <config projectName="quadrotor_sim" targetName="make_plan" />
@@ -13,17 +13,15 @@
       <config projectName="quadrotor_sim" targetName="move_quad_test_client" />
       <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_genpy" />
-      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="move_quad_server" />
       <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="quadrotor_sim" targetName="gmock" />
+      <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_move_quad" />
-      <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="gmock" />
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_gencpp" />
       <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_lisp" />
@@ -31,23 +29,22 @@
       <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_cpp" />
       <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="quadrotor_sim" targetName="run_tests" />
       <config projectName="quadrotor_sim" targetName="download_extra_data" />
       <config projectName="quadrotor_sim" targetName="add_two_ints_server" />
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_gennodejs" />
       <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="gtest_main" />
+      <config projectName="quadrotor_sim" targetName="quadrotor_sim_genlisp" />
       <config projectName="quadrotor_sim" targetName="tests" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_lisp" />
-      <config projectName="quadrotor_sim" targetName="move_quad_server" />
-      <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_eus" />
+      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="tf2_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_geneus" />
-      <config projectName="quadrotor_sim" targetName="run_tests" />
+      <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="clean_test_results" />
-      <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_cpp" />
       <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_mc_plan" />
       <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_cpp" />
@@ -59,10 +56,12 @@
       <config projectName="quadrotor_sim" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_py" />
       <config projectName="quadrotor_sim" targetName="add_two_ints_client" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_nodejs" />
       <config projectName="quadrotor_sim" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="quadrotor_sim" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="quadrotor_sim" targetName="actionlib_generate_messages_lisp" />
       <config projectName="quadrotor_sim" targetName="roscpp_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="_quadrotor_sim_generate_messages_check_deps_AddTwoInts" />
       <config projectName="quadrotor_sim" targetName="geometry_msgs_generate_messages_eus" />
@@ -70,6 +69,7 @@
       <config projectName="quadrotor_sim" targetName="quadrotor_sim_generate_messages_nodejs" />
       <config projectName="quadrotor_sim" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="quadrotor_sim" targetName="nav_msgs_generate_messages_nodejs" />
+      <config projectName="quadrotor_sim" targetName="actionlib_msgs_generate_messages_cpp" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -79,7 +79,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generateObservation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/generateObservation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/make_plan.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/make_plan.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -564,6 +566,7 @@
       <workItem from="1581014936727" duration="5817000" />
       <workItem from="1581208102691" duration="11471000" />
       <workItem from="1582066663931" duration="402000" />
+      <workItem from="1582410814725" duration="4080000" />
     </task>
     <servers />
   </component>
