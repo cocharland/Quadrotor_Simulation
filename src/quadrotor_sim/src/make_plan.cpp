@@ -18,6 +18,7 @@
 #include <vector>
 #include <chrono>
 #include <queue>
+#include <fstream>
 #include "generateObservation.h"
 #include "Graph.h"
 #include "Structures.h"
@@ -112,8 +113,72 @@ void euler2quat(geometry_msgs::Quaternion *q, EulerAngles RPY){
     //Done
 }
 
-void particleFilter(){
+void particleFilter(State * robot_state, std::vector<int8_t> observation){
+    //Takes a robot state and an observation and pushes updates into the map beliefs
 
+    //First step collate the map into a proper format for neigbor definitions
+    int map_limit_x = robot_state->map.info.width;
+    int map_limit_y = robot_state->map.info.height;
+    std::vector<int8_t> beliefMap = robot_state->map.data;
+    int temp_map[map_limit_y][map_limit_x];
+    int collated_observation[map_limit_y][map_limit_x];
+    int row = 0;
+    int col = 0;
+    for (int j = 0; j < beliefMap.size(); j++){
+        temp_map[row][col] = (int) beliefMap.at(j);
+        collated_observation[row][col] = observation.at(j);
+        if (col == map_limit_x-1){
+            row++;
+            col = 0;
+        } else {
+            col++;
+        }
+    }
+    //TODO::
+    // -- Need to updates the temp odd updates to actually use the bayesian update steps
+    int index = 0;
+    int updateValue = 20;
+    for(int j = 0; j < map_limit_x; j++){
+        for(int k = 0; k < map_limit_y; k++){
+            int tmp = 0;
+            switch (collated_observation[k][j]){ // if the observation includes the cell
+                case 0: //We've observed the cell to be open
+                    tmp = temp_map[k][j]-updateValue;
+                    if (tmp > 0 ){
+                        robot_state->map.data.at(index)-=updateValue;
+                        temp_map[k][j]-=updateValue;
+                    } else {
+                        robot_state->map.data.at(index)=0;
+                    }
+                    break;
+                case 1: //Observed closed cell
+                    tmp = temp_map[k][j]+updateValue;
+                    if (tmp < 100 ){
+                        robot_state->map.data.at(index)+=updateValue;
+                        temp_map[k][j] += updateValue;
+                    } else {
+                        robot_state->map.data.at(index)=100;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            index++;
+        }
+    }
+    std::ofstream testOut;
+    testOut.open("TestUpdate.txt");
+    for (int row = 0; row < map_limit_y;row++){
+        for (int col = 0; col < map_limit_x;col++){
+            testOut << std::to_string(temp_map[row][col]);
+            if (col < map_limit_x-1){
+                testOut << ',';
+            }
+            //std::cout << std::to_string(resulting_obs[row][col]) << std::endl;
+        }
+        testOut << '\n';
+    }
+    testOut.close();
 }
 
 float forwardSimulate(State *input_state, int action_number){
@@ -129,12 +194,12 @@ float forwardSimulate(State *input_state, int action_number){
     input_state->mapY = mapY;
 
     //Pack into 2d array for neighbors data
-    float temp_map[input_state->map.info.height][input_state->map.info.width];
-    int row = 0;
-    int col = 0;
-    std::cout << "Width:" << input_state->map.info.width << std::endl;
-    std::cout << "Height:" << input_state->map.info.height << '\n' << input_state->map.data.size() << std::endl;
-
+    //float temp_map[input_state->map.info.height][input_state->map.info.width];
+    //int row = 0;
+    //int col = 0;
+    //std::cout << "Width:" << input_state->map.info.width << std::endl;
+    //std::cout << "Height:" << input_state->map.info.height << '\n' << input_state->map.data.size() << std::endl;
+    /*
     for (int j = 0; j < input_state->map.data.size(); j++){
         temp_map[row][col] = input_state->map.data[j];
         if (col == 100){
@@ -144,17 +209,17 @@ float forwardSimulate(State *input_state, int action_number){
             col++;
         }
     }
-
+    */
     //std::cout << "X Cell: " << mapX << "\nY Cell: "<< mapY <<  std::endl;
     geometry_msgs::Quaternion inputQuat = input_state->robotPose.orientation;
     EulerAngles RPY;
     quat2euler(inputQuat, &RPY);
     geometry_msgs::Pose u_t;
-    std::cout << RPY.yaw << std::endl;
+    //std::cout << RPY.yaw << std::endl;
     //Now get the action ides
     EulerAngles yaw_change;
     yaw_change.yaw = 0;
-    std::cout << yaw_change.roll << std::endl;
+    //std::cout << yaw_change.roll << std::endl;
     int dist = 0;
     switch (action_number) {
         case 0: dist = 1;
@@ -178,9 +243,6 @@ float forwardSimulate(State *input_state, int action_number){
     } else if (RPY.yaw < 0){
         RPY.yaw += 2 * M_PI;
     }
-    if(DEBUG){
-        std::cout << RPY.yaw << std::endl;
-    }
     //Now the robot is pointed in the correct direction, but need to move in pointed direction.
     geometry_msgs::Quaternion q_u;
     euler2quat(&q_u, yaw_change );
@@ -188,12 +250,15 @@ float forwardSimulate(State *input_state, int action_number){
     u_t.position.y = std::sin(RPY.yaw)*dist; //change in pose stored
     u_t.position.z = 0;
     u_t.orientation = q_u;
+    // Update map positions to reflect the taken action....
     mapX = (x - input_state->map.info.origin.position.x + u_t.position.x) / input_state->map.info.resolution;
     mapY = (y - input_state->map.info.origin.position.y + u_t.position.y) / input_state->map.info.resolution;
-
+    input_state->mapX = mapX;
+    input_state->mapY = mapY;
     //std::cout << u_t.orientation.w <<" : " << u_t.orientation.z << std::endl;
     //Build an observation:
-    std::vector<int8_t> observation = generate_observation(input_state->map.data);
+    //generate a ray result over the observation. -1 means no info gained, 0 is seen empty, 1 is seen filled
+    std::vector<int8_t> ray_result = rayCast(input_state->map.data,RPY.yaw,mapX,mapY,input_state->map.info.width,input_state->map.info.height,input_state->map.info.resolution);
 
     // Need to change the probabilities over the map here:
 
@@ -202,8 +267,7 @@ float forwardSimulate(State *input_state, int action_number){
     //Now: reward mapping
     //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
     int observation_reward = 0;
-    std::vector<int8_t> ray_result = rayCast(input_state->map.data,RPY.yaw,mapX,mapY,input_state->map.info.width,input_state->map.info.height,input_state->map.info.resolution);
-    for (int j = 0; j < ray_result.size(); j++){
+     for (int j = 0; j < ray_result.size(); j++){
         if (ray_result.at(j) != -1){
             //now we are in the seen area
             if(input_state->map.data.at(j) == -1){
@@ -211,9 +275,26 @@ float forwardSimulate(State *input_state, int action_number){
             }
         }
     }
+    particleFilter(input_state, ray_result);
     //impact reward
+    int impact_reward = 0;
+    if (input_state->map.data.at(mapY*input_state->map.info.width+mapX) > 30){
+        impact_reward = -100;
+    }
+
+    //make sure the states are all rolled up proper
+
+    //Fixup the new x,y positions
+    input_state->robotPose.position.x = input_state->map.info.resolution*mapX+input_state->map.info.origin.position.x;
+    input_state->robotPose.position.y = input_state->map.info.resolution*mapY+input_state->map.info.origin.position.y;
+
+    euler2quat(&q_u,RPY);
+    input_state->robotPose.orientation = q_u;
+
+    return impact_reward+observation_reward+action_reward;
+
     //Need to map from the vector to a point in the belief map *after* the motion
-    //Tomorrow::try to get it to nav around a bit
+
 
 }
 
@@ -357,19 +438,7 @@ int main(int argc, char **argv)
     initialState.robotPose = initPose;
     Graph simulateTree;
     simulateTree.addNode(initialState,-1);
-/*    geometry_msgs::Quaternion testQuat;
-    testQuat.w = 1;
-    testQuat.x = 0.;
-    testQuat.y = 0;
-    testQuat.z = 0;*/
 
-    //EulerAngles result;
-    //quat2euler(testQuat, &result);
-    //std::cout << "angles: " << result.roll << '\n' << result.pitch << '\n' << result.yaw << std::endl;
-
-    //float Q = simulate(initialState,simulateTree,10,0);
-
-    //DEBUG:::: Building stuff for testing
     nav_msgs::OccupancyGrid testing_map;
     testing_map.info.resolution = 0.5;
     testing_map.info.height = 100;
@@ -379,7 +448,7 @@ int main(int argc, char **argv)
     std::vector<int8_t> testMap;
     std::vector<int8_t> obsMap;
     for (int j = 0; j < 10000; j++){
-        testMap.push_back(2);
+        testMap.push_back(20);
         obsMap.push_back((double) j / 100);
     }
     //std::cout << "check: " << (int) testMap[0] << std::endl;
@@ -390,25 +459,27 @@ int main(int argc, char **argv)
     initial_state.robotPose = initPose;
     initial_state.robotPose.orientation.w = 1;
 
-    forwardSimulate(&initial_state,0);
+    //forwardSimulate(&initial_state,0);
+
+
     auto start = std::chrono::high_resolution_clock::now();
-    std::vector<int8_t> testObs = generate_observation(obsMap);
-    if (DEBUG){
-                auto stop = std::chrono::high_resolution_clock::now();
-                auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-                std::cout << duration.count() << std::endl;
-                int sum = 0;
-                for (int j = 0; j < testObs.size(); j++){
-                    sum += testObs[j];
-                }
-        }
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+    //std::cout << duration.count() << std::endl;
+
     //TODO::
     // Additional functionality:
     //  Need to complete 'Simulate' framework
     //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
-    std::vector<int8_t> ray_result =  rayCast(testMap,M_PI,50,50,100,100,testing_map.info.resolution);
+    //std::vector<int8_t> ray_result =  rayCast(testMap,0,10,50,100,100,testing_map.info.resolution);
     //reward mappings:
 
+    for (int j = 0; j<50; j++){
+       float q =  forwardSimulate(&initial_state,1);
+       std::cout << q << std::endl;
+    }
+
+    std::cout << initial_state.robotPose.position.x << std::endl;
 
     return 0;
 }
