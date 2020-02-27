@@ -18,8 +18,11 @@ std::vector<int8_t> generate_observation(std::vector<int8_t> probabilities){
     std::default_random_engine generator(seed);
     //std::cout << probabilities.size() << std::endl;
     for (int j = 0; j < probabilities.size(); j++){
-
-        std::binomial_distribution<int> distribution(1,((float)probabilities[j] / 100));
+        float prob = ((float)probabilities[j] / 100);
+        if (prob<=0){
+            prob = 35.0;
+        }
+        std::binomial_distribution<int> distribution(1,prob);
         int result = distribution(generator);
         n += result;
         returned_vals.push_back(result);
@@ -128,4 +131,7 @@ std::vector<int8_t> rayCast(std::vector<int8_t> beliefMap, float theta, int mapX
         }
     }
     return output;
+}
+std::vector<int8_t> simulate_observation_from_truth(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y){
+
 }

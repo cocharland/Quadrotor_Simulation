@@ -33,7 +33,7 @@ int actionProgWiden(Graph *tree, int current_node){
     proposedAction = 1;
     //Notes: Node we have is going to be an observation Node should have up to four children.
     int newNode;
-    std::cout << proposedAction << std::endl; //DEBUG
+    //std::cout << proposedAction << std::endl; //DEBUG
     std::vector<int> children = tree->getAdjacentNodes(current_node);
     for (int j = 0; j < children.size();j++){
         std::cout<< "Child: " <<children[j]<<std::endl;
@@ -138,23 +138,30 @@ void particleFilter(State * robot_state, std::vector<int8_t> observation){
     // -- Need to updates the temp odd updates to actually use the bayesian update steps
     int index = 0;
     int updateValue = 20;
+    int default_value = 40;
     for(int j = 0; j < map_limit_x; j++){
         for(int k = 0; k < map_limit_y; k++){
             int tmp = 0;
             switch (collated_observation[k][j]){ // if the observation includes the cell
                 case 0: //We've observed the cell to be open
+                    if(temp_map[k][j] == -1){//first observation
+                        temp_map[k][j] = default_value;
+                    }
                     tmp = temp_map[k][j]-updateValue;
                     if (tmp > 0 ){
-                        robot_state->map.data.at(index)-=updateValue;
+                        robot_state->map.data.at(index)=(int8_t)tmp;
                         temp_map[k][j]-=updateValue;
                     } else {
                         robot_state->map.data.at(index)=0;
                     }
                     break;
                 case 1: //Observed closed cell
+                    if(temp_map[k][j] == -1){//first observation
+                        temp_map[k][j] = default_value;
+                    }
                     tmp = temp_map[k][j]+updateValue;
                     if (tmp < 100 ){
-                        robot_state->map.data.at(index)+=updateValue;
+                        robot_state->map.data.at(index)= (int8_t)tmp;
                         temp_map[k][j] += updateValue;
                     } else {
                         robot_state->map.data.at(index)=100;
@@ -193,23 +200,6 @@ float forwardSimulate(State *input_state, int action_number){
     input_state->mapX = mapX;
     input_state->mapY = mapY;
 
-    //Pack into 2d array for neighbors data
-    //float temp_map[input_state->map.info.height][input_state->map.info.width];
-    //int row = 0;
-    //int col = 0;
-    //std::cout << "Width:" << input_state->map.info.width << std::endl;
-    //std::cout << "Height:" << input_state->map.info.height << '\n' << input_state->map.data.size() << std::endl;
-    /*
-    for (int j = 0; j < input_state->map.data.size(); j++){
-        temp_map[row][col] = input_state->map.data[j];
-        if (col == 100){
-            row++;
-            col = 0;
-        } else {
-            col++;
-        }
-    }
-    */
     //std::cout << "X Cell: " << mapX << "\nY Cell: "<< mapY <<  std::endl;
     geometry_msgs::Quaternion inputQuat = input_state->robotPose.orientation;
     EulerAngles RPY;
@@ -270,6 +260,7 @@ float forwardSimulate(State *input_state, int action_number){
      for (int j = 0; j < ray_result.size(); j++){
         if (ray_result.at(j) != -1){
             //now we are in the seen area
+            //std::cout << std::to_string(input_state->map.data.at(j)) << std::endl;
             if(input_state->map.data.at(j) == -1){
                 observation_reward++;
             }
@@ -448,7 +439,7 @@ int main(int argc, char **argv)
     std::vector<int8_t> testMap;
     std::vector<int8_t> obsMap;
     for (int j = 0; j < 10000; j++){
-        testMap.push_back(20);
+        testMap.push_back(-1);
         obsMap.push_back((double) j / 100);
     }
     //std::cout << "check: " << (int) testMap[0] << std::endl;
@@ -476,7 +467,7 @@ int main(int argc, char **argv)
 
     for (int j = 0; j<50; j++){
        float q =  forwardSimulate(&initial_state,1);
-       std::cout << q << std::endl;
+       std::cout << "Q: "<< q << std::endl;
     }
 
     std::cout << initial_state.robotPose.position.x << std::endl;
