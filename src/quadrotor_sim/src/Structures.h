@@ -34,7 +34,7 @@ struct adjNode{
     uint8_t color; //0 = white; 1 = grey; 2 = black
     State robotState; //state of the system at this node.
     int action;
-    std::vector<int> observation;
+    std::vector<int8_t> observation;
     int N,M;
     double Q;
 

@@ -188,7 +188,7 @@ void particleFilter(State * robot_state, std::vector<int8_t> observation){
     testOut.close();
 }
 
-float forwardSimulate(State *input_state, int action_number){
+float forwardSimulate(State *input_state, int action_number, std::vector<int8_t>  &obsContainer){
     //Should return a generated observation, a reward and the next state...
 
     float x = input_state->robotPose.position.x;
@@ -249,6 +249,7 @@ float forwardSimulate(State *input_state, int action_number){
     //Build an observation:
     //generate a ray result over the observation. -1 means no info gained, 0 is seen empty, 1 is seen filled
     std::vector<int8_t> ray_result = rayCast(input_state->map.data,RPY.yaw,mapX,mapY,input_state->map.info.width,input_state->map.info.height,input_state->map.info.resolution);
+    obsContainer = ray_result;
 
     // Need to change the probabilities over the map here:
 
@@ -303,8 +304,9 @@ float simulate(State stateIn, Graph *tree , int d, int current_node) {
     adjNode * actionNode = tree->getNode(action_node_number);
     int N_ha = actionNode->N;
     int action_value = actionNode->action;
+    std::vector<int8_t> ray_result;
     if (observationChildren.size() <= k_0*pow(N_ha,alpha_0)){ //means we should make a new node...probably
-        float q = forwardSimulate(&(actionNode->robotState), action_value);
+        float q = forwardSimulate(&(actionNode->robotState), action_value, ray_result);
 
     }
 
@@ -425,7 +427,7 @@ int main(int argc, char **argv)
     //Now Working on Simulate::
     initPose.position.z = 0;
     initPose.position.x = 10;
-    initPose.position.y = 10;
+    initPose.position.y = 15;
     initialState.robotPose = initPose;
     Graph simulateTree;
     simulateTree.addNode(initialState,-1);
@@ -454,9 +456,7 @@ int main(int argc, char **argv)
 
 
     auto start = std::chrono::high_resolution_clock::now();
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-    //std::cout << duration.count() << std::endl;
+
 
     //TODO::
     // Additional functionality:
@@ -464,12 +464,22 @@ int main(int argc, char **argv)
     //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
     //std::vector<int8_t> ray_result =  rayCast(testMap,0,10,50,100,100,testing_map.info.resolution);
     //reward mappings:
-
-    for (int j = 0; j<50; j++){
-       float q =  forwardSimulate(&initial_state,1);
-       std::cout << "Q: "<< q << std::endl;
+    std::vector<int8_t> obs_container;
+    int action  = 1;
+    for (int j = 0; j<4; j++){
+        forwardSimulate(&initial_state,1,obs_container);
     }
-
+    for (int j = 0; j<500; j++){
+       float q =  forwardSimulate(&initial_state,action,obs_container);
+       //action = 1;
+       if (j % 2 != 0){
+            action = 1;
+        }
+       //std::cout <<initial_state.robotPose.position.x << " " << initial_state.robotPose.position.y << std::endl;
+    }
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+    std::cout << duration.count() << std::endl;
     std::cout << initial_state.robotPose.position.x << std::endl;
 
     return 0;

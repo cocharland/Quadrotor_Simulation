@@ -79,6 +79,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9622a5f-92a3-47cb-9237-7e0f72bcf4b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/Graph.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/Graph.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/generateObservation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/generateObservation.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/make_plan.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/CMakeFiles/make_plan.dir/src/make_plan.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/Test.txt" afterDir="false" />
@@ -86,7 +87,9 @@
       <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/TestUpdate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/TestUpdate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" beforeDir="false" afterPath="$PROJECT_DIR$/../../devel/lib/quadrotor_sim/make_plan" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structures.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structures.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generateObservation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/generateObservation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generateObservation.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/generateObservation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/make_plan.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/make_plan.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,7 +121,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../build" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.profiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -572,7 +575,7 @@
       <workItem from="1581208102691" duration="11471000" />
       <workItem from="1582066663931" duration="402000" />
       <workItem from="1582410814725" duration="7551000" />
-      <workItem from="1582757084577" duration="14859000" />
+      <workItem from="1582757084577" duration="21349000" />
     </task>
     <servers />
   </component>
