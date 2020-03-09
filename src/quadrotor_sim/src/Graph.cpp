@@ -30,6 +30,22 @@ int Graph::addNode(State nodeState, int action){
 
     return nodeToAdd.nodeNum;
 }
+int Graph::addObsNode(std::vector<int8_t> obsIn){
+    adjNode nodeToAdd;
+    nodeToAdd.nodeNum = numNodes;
+    nodeToAdd.action = -1;
+    nodeToAdd.observation = obsIn;
+    nodeToAdd.N = 0;
+    nodeToAdd.M = 0;
+    nodeToAdd.Q = 0;
+    nodeList.push_back(nodeToAdd);
+    std::vector<int> list_into;
+    list_into.push_back(numNodes); //Probably will need to fix implementation of node referencing
+    adjacencyList.push_back(list_into);
+    numNodes++;
+
+    return nodeToAdd.nodeNum;
+}
 adjNode * Graph::getNode(int nodeNum){
     for (int i = 0;i<numNodes;i++){
         if (nodeList[i].nodeNum == nodeNum){
@@ -106,6 +122,8 @@ void Graph::node_numbering_fixup(int rootNode){
         for (int k = 0; k < tmp_container.size(); k++){
             int nodeTochange = adjacencyList.at(j).at(k);
             std::cout << nodeTochange << std::endl;
+
+            //Not done yet?
         }
     }
 }

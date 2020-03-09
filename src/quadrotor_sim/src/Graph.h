@@ -24,7 +24,7 @@ public:
     int removeEdge(int fromNode, int toNode);
     void node_numbering_fixup(int rootNode);
     int prune_tree(int rootNode);
-
+    int addObsNode(std::vector<int8_t>);
 
 
 };

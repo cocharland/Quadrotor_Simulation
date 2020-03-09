@@ -30,7 +30,7 @@ int actionProgWiden(Graph *tree, int current_node){
     adjNode *currentNode = tree->getNode(current_node);
     int proposedAction = rand() % 4; // generate number between 0 and 3
     //DEBUG::
-    proposedAction = 1;
+    //proposedAction = 1;
     //Notes: Node we have is going to be an observation Node should have up to four children.
     int newNode;
     //std::cout << proposedAction << std::endl; //DEBUG
@@ -289,10 +289,13 @@ float forwardSimulate(State *input_state, int action_number, std::vector<int8_t>
 
 
 }
+float rollout(State stateIn, Graph * sim_tree, int d, int currentNode){
 
+}
 float simulate(State stateIn, Graph *tree , int d, int current_node) {
     //returns the total reward for the specified level of recursion
     //Normal Vars:
+    float total = 0.0;
     double k_0 = 6.0;
     double alpha_0 = 1.0/5.0;
 
@@ -305,10 +308,40 @@ float simulate(State stateIn, Graph *tree , int d, int current_node) {
     int N_ha = actionNode->N;
     int action_value = actionNode->action;
     std::vector<int8_t> ray_result;
-    if (observationChildren.size() <= k_0*pow(N_ha,alpha_0)){ //means we should make a new node...probably
-        float q = forwardSimulate(&(actionNode->robotState), action_value, ray_result);
+    int currentNodeNumber = action_node_number;
+    float q = 0.0;
+    if (observationChildren.size()-1 <= k_0*pow(N_ha,alpha_0)){ //means we should make a new node...probably
+        q = forwardSimulate(&(actionNode->robotState), action_value, ray_result);
+        //Now look into the observation children
+        bool match = false;
+        for(int j = 1; j < observationChildren.size();j++){
+            if(ray_result == tree->getNode(observationChildren.at(j))->observation){
+                match = true;
+                currentNodeNumber = observationChildren.at(j);
+                break;
+            }
+        }
+        if (match){
+            tree->getNode(currentNodeNumber)->M++;
+            currentNodeNumber = tree->getAdjacentNodes(currentNodeNumber).at(1); //move down the tree
+
+        } else {
+            //need to add observation node to the tree
+            int prevNode = currentNodeNumber;
+            currentNodeNumber = tree->addObsNode(ray_result);
+            tree->getNode(currentNodeNumber)->M++;
+            //connect the nodes
+            tree->addEdge(prevNode,currentNodeNumber);
+        }
+        //add state node here...
+
+        if (tree->getNode(currentNodeNumber)->M == 1){
+           // total = rollout()
+        }
+
 
     }
+    return q;
 
 }
 bool plan(quadrotor_sim::mc_plan::Request  &req,
@@ -456,31 +489,17 @@ int main(int argc, char **argv)
 
 
     auto start = std::chrono::high_resolution_clock::now();
-
-
+    Graph * sim_tree = new Graph();
+    sim_tree->addNode(initial_state,-1);
     //TODO::
     // Additional functionality:
     //  Need to complete 'Simulate' framework
-    //rayCast(std::vector<int8_t> beliefMap, float theta, int mapX, int mapY, int map_limit_x, int map_limit_y,double map_resolution)
-    //std::vector<int8_t> ray_result =  rayCast(testMap,0,10,50,100,100,testing_map.info.resolution);
-    //reward mappings:
-    std::vector<int8_t> obs_container;
-    int action  = 1;
-    for (int j = 0; j<4; j++){
-        forwardSimulate(&initial_state,1,obs_container);
-    }
-    for (int j = 0; j<500; j++){
-       float q =  forwardSimulate(&initial_state,action,obs_container);
-       //action = 1;
-       if (j % 2 != 0){
-            action = 1;
-        }
-       //std::cout <<initial_state.robotPose.position.x << " " << initial_state.robotPose.position.y << std::endl;
-    }
+    float q = simulate(initial_state,sim_tree,1,0);
+    std::cout << q <<" <--q: " <<sim_tree->numNodes << std::endl;
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
     std::cout << duration.count() << std::endl;
-    std::cout << initial_state.robotPose.position.x << std::endl;
+
 
     return 0;
 }
