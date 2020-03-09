@@ -289,7 +289,18 @@ float forwardSimulate(State *input_state, int action_number, std::vector<int8_t>
 
 
 }
-float rollout(State stateIn, Graph * sim_tree, int d, int currentNode){
+float rollout(State stateIn, Graph * tree, int d, int currentNode){
+    if (d==0){
+        return 0;
+    }
+    int proposedAction = rand() % 4;
+    State actionNodeState;
+    actionNodeState = stateIn;
+    int newNode = tree->addNode(actionNodeState, proposedAction);
+    std::cout << "Created Node #: " << newNode <<"\n Connected to : "<< currentNode << std::endl;
+    tree->addEdge(currentNode,newNode);
+    //keep descending
+    forwardSimulate( stateIn, )
 
 }
 float simulate(State stateIn, Graph *tree , int d, int current_node) {
@@ -311,7 +322,7 @@ float simulate(State stateIn, Graph *tree , int d, int current_node) {
     int currentNodeNumber = action_node_number;
     float q = 0.0;
     if (observationChildren.size()-1 <= k_0*pow(N_ha,alpha_0)){ //means we should make a new node...probably
-        q = forwardSimulate(&(actionNode->robotState), action_value, ray_result);
+        q = forwardSimulate( & stateIn, action_value, ray_result);
         //Now look into the observation children
         bool match = false;
         for(int j = 1; j < observationChildren.size();j++){
@@ -322,19 +333,22 @@ float simulate(State stateIn, Graph *tree , int d, int current_node) {
             }
         }
         if (match){
-            tree->getNode(currentNodeNumber)->M++;
             currentNodeNumber = tree->getAdjacentNodes(currentNodeNumber).at(1); //move down the tree
 
         } else {
             //need to add observation node to the tree
             int prevNode = currentNodeNumber;
             currentNodeNumber = tree->addObsNode(ray_result);
-            tree->getNode(currentNodeNumber)->M++;
+
             //connect the nodes
             tree->addEdge(prevNode,currentNodeNumber);
         }
         //add state node here...
+        int prev = currentNodeNumber;
+        currentNodeNumber = tree->addNode(stateIn, -1);
 
+        tree->getNode(currentNodeNumber)->M++;
+        tree->addEdge(prev,currentNodeNumber);
         if (tree->getNode(currentNodeNumber)->M == 1){
            // total = rollout()
         }
